@@ -3,18 +3,41 @@
 /* ========== CSS ПЕРЕМЕННЫЕ ========== */
 :root {
     /* Основные цвета фона (природные цвета) */
+    --download-card-bg: rgba(255, 255, 255, 0.05);
+--download-card-border: rgba(255, 255, 255, 0.1);
+--download-card-hover-border: var(--terminal-teal);
+--tech-tag-bg: rgba(78, 201, 176, 0.15);
+--tech-tag-text: var(--terminal-teal);
+--tech-tag-border: rgba(78, 201, 176, 0.3);
+--download-btn-bg: var(--terminal-teal);
+--download-btn-text: var(--primary-dark);
+--download-info-bg: rgba(0, 0, 0, 0.2);
+--download-info-border: var(--terminal-teal);
+--notification-bg: var(--primary-dark);
+--notification-border: var(--terminal-teal);
     --primary-light: #f8f9fa;
     --sidebar-light: #e9f5e9;
     --nav-light: #ffffff;
     --header-light: #4a6fa5;
     --accent-green: #d4edda;
     --tab-active: #e3f2fd;
+    --tab-inactive: #ffffff;
+    --footer-tabs-bg: #ffffff;
+    --footer-tab-active-bg: #e3f2fd;
+    --footer-tab-hover-bg: rgba(0, 0, 0, 0.05);
+    --notification-bg: #f8f9fa;
+    --notification-border: rgba(0, 0, 0, 0.1);
+    --notification-shadow: rgba(0, 0, 0, 0.1);
+    --empty-state-bg: #f8f9fa;
     
     /* Цвета текста */
     --text-dark: #2c3e50;
     --text-gray: #6c757d;
     --menu-light: #ffffff;
     --menu-text: #495057;
+    --path-active: #1abc9c;
+    --path-inactive: #6c757d;
+    --empty-state-text: #6c757d;
     
     /* Границы и разделители */
     --border-light: rgba(0, 0, 0, 0.1);
@@ -31,8 +54,69 @@
     --problems-red: #e74c3c;
     --output-blue: #3498db;
     --debug-orange: #e67e22;
-    --terminal-teal: #1abc9c;
     --comments-green: #27ae60;
+    
+    /* Цвета скроллбаров */
+    --scrollbar-track: #e9f5e9;
+    --scrollbar-thumb: rgba(0, 0, 0, 0.15);
+    --scrollbar-thumb-hover: rgba(0, 0, 0, 0.25);
+    --text-scrollbar-thumb: rgba(0, 0, 0, 0.1);
+    --text-scrollbar-thumb-hover: rgba(0, 0, 0, 0.2);
+    --footer-scrollbar-thumb: rgba(0, 0, 0, 0.1);
+    --footer-scrollbar-thumb-hover: rgba(0, 0, 0, 0.2);
+    
+    /* Достижения */
+    --achievements-gradient-start: #27ae60;
+    --achievements-gradient-end: #1abc9c;
+    --achievement-bg: rgba(0, 0, 0, 0.03);
+    --achievement-border: #1abc9c;
+    --achievement-details-bg: rgba(0, 0, 0, 0.05);
+    --certificate-border: rgba(0, 0, 0, 0.1);
+    --certificate-hover-border: #1abc9c;
+    --certificate-hover-shadow: rgba(26, 188, 156, 0.4);
+    --stats-gradient-start: rgba(26, 188, 156, 0.1);
+    --stats-gradient-end: rgba(52, 152, 219, 0.1);
+    --stats-border: rgba(0, 0, 0, 0.1);
+    --stat-item-bg: rgba(0, 0, 0, 0.05);
+    --achievements-footer-bg: rgba(0, 0, 0, 0.05);
+    --achievements-footer-border: rgba(0, 0, 0, 0.1);
+    --portfolio-link-bg: #1abc9c;
+    --portfolio-link-text: #ffffff;
+    
+    /* Обо мне */
+    --profession-title-color: #1abc9c;
+    --about-me-header-border: rgba(0, 0, 0, 0.1);
+    --skill-badge-bg: rgba(26, 188, 156, 0.1);
+    --skill-badge-text: #1abc9c;
+    --skill-badge-border: rgba(26, 188, 156, 0.3);
+    --photo-border: #1abc9c;
+    --current-learning-bg: rgba(0, 0, 0, 0.05);
+    --current-learning-border: #4a90e2;
+    --aviation-details-bg: rgba(0, 0, 0, 0.03);
+    --aviation-details-border: rgba(0, 0, 0, 0.1);
+    --mentor-section-gradient-start: rgba(248, 249, 250, 0.8);
+    --mentor-section-gradient-end: rgba(233, 245, 233, 0.8);
+    --mentor-section-border: rgba(0, 0, 0, 0.1);
+    --mentor-photo-border: #1abc9c;
+    --mentor-skills-bg: rgba(0, 0, 0, 0.05);
+    --club-info-bg: rgba(26, 188, 156, 0.1);
+    --club-info-border: #1abc9c;
+    --timeline-line: rgba(0, 0, 0, 0.1);
+    --sport-item-bg: rgba(0, 0, 0, 0.03);
+    --sport-item-current-bg: rgba(26, 188, 156, 0.1);
+    --sport-item-current-border: #1abc9c;
+    --sport-item-marker: #1abc9c;
+    --sport-item-marker-border: #f8f9fa;
+    --sport-item-current-marker: #4a90e2;
+    --sport-name-underline: #1abc9c;
+    --sport-item-connector: rgba(0, 0, 0, 0.2);
+    --sports-conclusion-bg: rgba(0, 0, 0, 0.05);
+    --sports-conclusion-border: #27ae60;
+    --plan-category-bg: rgba(0, 0, 0, 0.03);
+    --plan-category-border: rgba(0, 0, 0, 0.1);
+    --quote-gradient-start: rgba(248, 249, 250, 0.8);
+    --quote-gradient-end: rgba(233, 245, 233, 0.8);
+    --quote-border: #1abc9c;
 }
 
 /* ========== ОСНОВНЫЕ ЭЛЕМЕНТЫ ========== */
@@ -41,8 +125,6 @@
 body {
     background-color: var(--primary-light);
 }
-
-/* УДАЛЕНО: Стили для .head_shapka и .nav_head */
 
 /* Левое боковое меню */
 .left_menu {
@@ -119,15 +201,16 @@ body {
 }
 
 .tab {
-    background-color: var(--tab-active);
+    background-color: var(--tab-inactive);
     border: 1px solid var(--border-light);
 }
 
 .tab h2 {
     color: var(--text-dark);
 }
+
 .path li:last-child {
-    color: var(--ocean-teal);
+    color: var(--path-active);
 }
 
 /* Навигация в основном контенте */
@@ -230,7 +313,7 @@ body {
 }
 
 .footer-tabs {
-    background-color: var(--nav-light);
+    background-color: var(--footer-tabs-bg);
     border-bottom: 1px solid var(--border-light);
 }
 
@@ -240,11 +323,11 @@ body {
 }
 
 .footer-tab:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: var(--footer-tab-hover-bg);
 }
 
 .footer-tab.active {
-    background-color: var(--tab-active);
+    background-color: var(--footer-tab-active-bg);
     border-bottom: 2px solid var(--ocean-teal);
 }
 
@@ -271,7 +354,7 @@ body {
 }
 
 .footer-tab[data-tab="terminal"] {
-    border-left: 3px solid var(--terminal-teal);
+    border-left: 3px solid var(--ocean-teal);
 }
 
 .footer-tab[data-tab="comments"] {
@@ -368,15 +451,15 @@ body {
 
 /* Основной скроллбар контента */
 .main_content::-webkit-scrollbar-track {
-    background: var(--sidebar-light);
+    background: var(--scrollbar-track);
 }
 
 .main_content::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.15);
+    background: var(--scrollbar-thumb);
 }
 
 .main_content::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.25);
+    background: var(--scrollbar-thumb-hover);
 }
 
 /* Скроллбар текстового контента */
@@ -385,11 +468,11 @@ body {
 }
 
 .text-content::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.1);
+    background: var(--text-scrollbar-thumb);
 }
 
 .text-content::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--text-scrollbar-thumb-hover);
 }
 
 /* Скроллбар для футера */
@@ -398,11 +481,11 @@ body {
 }
 
 .footer-content::-webkit-scrollbar-thumb {
-    background: var(--border-light);
+    background: var(--footer-scrollbar-thumb);
 }
 
 .footer-content::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--footer-scrollbar-thumb-hover);
 }
 
 /* Скроллбар для чисел строк */
@@ -418,285 +501,191 @@ body {
     background: rgba(0, 0, 0, 0.1);
 }
 
-/* ========== МЕДИА-ЗАПРОСЫ ========== */
+/* ========== ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ========== */
 
-@media (max-width: 1200px) {
-    :root {
-        /* Можно изменить цвета для адаптивного дизайна */
-        --primary-light: #f9fafb;
-        --sidebar-light: #edf7ed;
-    }
+/* Пустое состояние */
+.no-tab-content {
+    background-color: var(--empty-state-bg);
 }
 
-@media (max-width: 768px) {
-    :root {
-        /* Более светлые оттенки для мобильных */
-        --primary-light: #ffffff;
-        --sidebar-light: #f0f8f0;
-        --border-light: rgba(0, 0, 0, 0.08);
-    }
+.empty-state {
+    color: var(--empty-state-text);
 }
 
-/* Системная светлая тема по умолчанию */
-@media (prefers-color-scheme: light) {
-    :root {
-        /* Уже настроены для светлой темы */
-    }
-}
-
-/* Для систем, которые предпочитают тёмную тему */
-@media (prefers-color-scheme: dark) {
-    /* Если пользователь не выбрал тему вручную, можно применить тёмную */
-    body:not([data-theme-manual]) {
-        background-color: #002451;
-        color: #fff6f6;
-    }
-}
-
-/* Для выбранной вручную темы */
-body[data-theme="white_color"] {
-    /* Гарантируем, что светлая тема применена */
-    background-color: var(--primary-light) !important;
-    color: var(--text-dark) !important;
-}
-
-body[data-theme="color"] {
-    /* Гарантируем, что тёмная тема применена */
-    background-color: #002451 !important;
-    color: #fff6f6 !important;
-}
-
-/* ========== АНИМАЦИИ ========== */
-body {
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-.left_menu,
-.left_nav,
-.head_title,
-.main_nav,
-.footer,
-.footer-tabs,
-.footer-content {
-    transition: background-color 0.5s ease, border-color 0.5s ease;
-}
-
-.text-content,
-.path,
-.tab h2,
-.footer-tab-header {
-    transition: color 0.5s ease;
-}
-
-.line-numbers,
-.code-editor {
-    transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
-}
-
-/* ========== ПРИРОДНЫЕ ЦВЕТА ДЛЯ ЭЛЕМЕНТОВ ========== */
-
-/* Эффекты для активных состояний */
-.left_nav_main_sec:hover {
-    background-color: #c3e6cb; /* Светлее акцентного зеленого при наведении */
-}
-
-.footer-tab.active {
-    background-color: #d1ecf1; /* Светлый бирюзовый для активной вкладки футера */
-    border-bottom: 2px solid var(--ocean-teal);
-}
-
-/* Цвета для разных типов текста */
-.text-content strong {
-    color: var(--earth-brown);
-}
-
-.text-content em {
-    color: var(--sky-blue);
-}
-
-.text-content a {
-    color: var(--forest-green);
-    text-decoration: none;
-}
-
-.text-content a:hover {
-    text-decoration: underline;
-    color: var(--ocean-teal);
-}
-
-/* Цвета для списков */
-.text-content ul li::before {
-    color: var(--sunset-orange);
-}
-
-.text-content ol {
-    color: var(--earth-brown);
-}
-
-/* Цвета для блоков цитат */
-.text-content blockquote {
-    border-left: 4px solid var(--sand-beige);
-    background-color: rgba(245, 230, 202, 0.2);
-    padding: 10px 15px;
-    margin: 15px 0;
-    color: var(--earth-brown);
-}
-
-/* Цвета для кода внутри текста */
-.text-content code {
-    background-color: rgba(0, 0, 0, 0.05);
-    color: var(--sunset-orange);
-    padding: 2px 6px;
-    border-radius: 3px;
-    font-family: 'RobotoMono-Bold', monospace;
-    font-size: 0.9em;
-}
-
-/* Цвета для выделенного текста */
-::selection {
-    background-color: rgba(74, 144, 226, 0.3); /* Полупрозрачный sky-blue */
+.empty-state h1 {
     color: var(--text-dark);
 }
 
-/* Цвета для заголовков внутри футера */
-.footer-tab-content h3 {
-    color: var(--forest-green);
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-/* Цвета для предупреждений и ошибок в футере */
-.footer-tab-content .error {
-    color: var(--problems-red);
-}
-
-.footer-tab-content .warning {
-    color: var(--debug-orange);
-}
-
-.footer-tab-content .info {
-    color: var(--output-blue);
-}
-
-.footer-tab-content .success {
-    color: var(--comments-green);
-}
-
-/* ========== ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ ТЕРМИНАЛА ========== */
-.terminal-output .command {
-    color: var(--sky-blue);
-    font-weight: bold;
-}
-
-.terminal-output .directory {
-    color: var(--forest-green);
-}
-
-.terminal-output .file {
-    color: var(--ocean-teal);
-}
-
-.terminal-output .error-message {
-    color: var(--problems-red);
-}
-
-.terminal-output .success-message {
-    color: var(--comments-green);
-}
-
-/* Цвета для иконок в зависимости от типа файлов (в левой навигации) */
-.left_nav_ul li[data-file-type="html"]::before {
-    filter: brightness(0.3) sepia(1) hue-rotate(200deg) saturate(3);
-}
-
-.left_nav_ul li[data-file-type="css"]::before {
-    filter: brightness(0.3) sepia(1) hue-rotate(120deg) saturate(3);
-}
-
-.left_nav_ul li[data-file-type="js"]::before {
-    filter: brightness(0.3) sepia(1) hue-rotate(50deg) saturate(3);
-}
-
-.left_nav_ul li[data-file-type="json"]::before {
-    filter: brightness(0.3) sepia(1) hue-rotate(280deg) saturate(3);
-}
-
-/* Цвета для индикаторов состояния */
-.status-indicator.online {
-    background-color: var(--forest-green);
-}
-
-.status-indicator.offline {
-    background-color: var(--problems-red);
-}
-
-.status-indicator.working {
-    background-color: var(--sky-blue);
-}
-
-.status-indicator.paused {
-    background-color: var(--debug-orange);
-}
-.path {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-    font-size: 12px;
-    font-family: 'Poppins-regular';
-    width: 100%;
-}
-
-.path li {
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding-right: 15px;
-    margin-right: 5px;
-    color: var(--text-gray);
-    height: 100%;
-}
-
-/* Разделитель между элементами пути */
-.path li:not(:last-child)::after {
-    content: '›';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--text-gray);
-    font-size: 16px;
-    font-weight: bold;
-    opacity: 0.7;
-}
-
-/* Последний элемент (активный) */
-.path li:last-child {
-    color: var(--forest-green); /* Зеленый цвет для активного элемента */
-    font-weight: 600;
-    margin-right: 0;
-    padding-right: 0;
-}
-
-/* Ховер эффект для элементов пути */
-.path li:hover {
-    color: var(--ocean-teal);
-}
-
-/* Конкретно для элементов "Мое портфолио" и других */
-.path li:nth-child(1) { /* Первый элемент */
-    color: var(--sky-blue);
-}
-
-.path li:nth-child(2) { /* Второй элемент */
-    color: var(--forest-green);
-}
-body[data-theme="white_color"] .theme-dropdown {
-    background-color: var(--nav-light);
-    border: 1px solid var(--border-light);
-}
-
-body[data-theme="white_color"] .theme-option {
+/* Уведомления курсора */
+.cursor-notification {
+    background-color: var(--notification-bg);
     color: var(--text-dark);
+    border: 1px solid var(--notification-border);
+    box-shadow: 0 4px 12px var(--notification-shadow);
+}
+
+/* Достижения */
+#achievements-content .text-content::before {
+    background: linear-gradient(to bottom, var(--achievements-gradient-start), var(--achievements-gradient-end));
+}
+
+.achievement-item {
+    background-color: var(--achievement-bg);
+    border-left: 4px solid var(--achievement-border);
+}
+
+.achievement-details {
+    background-color: var(--achievement-details-bg);
+}
+
+.certificate-img {
+    border: 2px solid var(--certificate-border);
+}
+
+.certificate-link:hover .certificate-img {
+    border-color: var(--certificate-hover-border);
+    box-shadow: 0 0 15px var(--certificate-hover-shadow);
+}
+
+.achievements-stats {
+    background: linear-gradient(135deg, var(--stats-gradient-start), var(--stats-gradient-end));
+    border: 1px solid var(--stats-border);
+}
+
+.stat-item {
+    background-color: var(--stat-item-bg);
+}
+
+.achievements-footer {
+    background-color: var(--achievements-footer-bg);
+    border: 2px dashed var(--achievements-footer-border);
+}
+
+.full-portfolio-link {
+    background-color: var(--portfolio-link-bg);
+    color: var(--portfolio-link-text);
+}
+
+/* Обо мне */
+.profession-title {
+    color: var(--profession-title-color);
+}
+
+.about-me-header {
+    border-bottom: 2px solid var(--about-me-header-border);
+}
+
+.skill-badge {
+    background-color: var(--skill-badge-bg);
+    color: var(--skill-badge-text);
+    border: 1px solid var(--skill-badge-border);
+}
+
+.about-me-photo {
+    border: 3px solid var(--photo-border);
+}
+
+.current-learning {
+    background-color: var(--current-learning-bg);
+    border-left: 4px solid var(--current-learning-border);
+}
+
+.aviation-details {
+    background-color: var(--aviation-details-bg);
+    border: 1px solid var(--aviation-details-border);
+}
+
+.mentor-section {
+    background: linear-gradient(135deg, var(--mentor-section-gradient-start), var(--mentor-section-gradient-end));
+    border: 1px solid var(--mentor-section-border);
+}
+
+.mentor-photo {
+    border: 3px solid var(--mentor-photo-border);
+}
+
+.mentor-skills {
+    background-color: var(--mentor-skills-bg);
+}
+
+.club-info {
+    background-color: var(--club-info-bg);
+    border-left: 3px solid var(--club-info-border);
+}
+
+.sports-timeline:before {
+    background-color: var(--timeline-line);
+}
+
+.sport-item {
+    background-color: var(--sport-item-bg);
+}
+
+.sport-item.current {
+    background-color: var(--sport-item-current-bg);
+    border: 2px solid var(--sport-item-current-border);
+}
+
+.sport-item:before {
+    background-color: var(--sport-item-marker);
+    border: 3px solid var(--sport-item-marker-border);
+}
+
+.sport-item.current:before {
+    background-color: var(--sport-item-current-marker);
+    border-color: var(--sport-item-current-marker);
+}
+
+.sport-name:after {
+    background-color: var(--sport-name-underline);
+}
+
+.sport-item:after {
+    background-color: var(--sport-item-connector);
+}
+
+.sports-conclusion {
+    background-color: var(--sports-conclusion-bg);
+    border-left: 4px solid var(--sports-conclusion-border);
+}
+
+.plan-category {
+    background-color: var(--plan-category-bg);
+    border: 1px solid var(--plan-category-border);
+}
+
+.personal-quote {
+    background: linear-gradient(135deg, var(--quote-gradient-start), var(--quote-gradient-end));
+    border-left: 5px solid var(--quote-border);
+}
+/* ========== СТИЛИ ДЛЯ СИСТЕМЫ СКАЧИВАНИЯ ========== */
+
+.download-card {
+    background-color: var(--download-card-bg);
+    border: 1px solid var(--download-card-border);
+}
+
+.download-card:hover {
+    border-color: var(--download-card-hover-border);
+}
+
+.tech-tag {
+    background-color: var(--tech-tag-bg);
+    color: var(--tech-tag-text);
+    border: 1px solid var(--tech-tag-border);
+}
+
+.download-btn {
+    background-color: var(--download-btn-bg);
+    color: var(--download-btn-text);
+}
+
+.download-info, .download-instructions {
+    background-color: var(--download-info-bg);
+    border-left: 4px solid var(--download-info-border);
+}
+
+.download-notification {
+    background-color: var(--notification-bg);
+    border: 1px solid var(--notification-border);
 }
