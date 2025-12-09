@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мое портфолио</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/color.css">
+    <link rel="stylesheet" href="./css/swap.css">
+</head>
+<body>
+    <!-- УДАЛЕНЫ: head_shapka и nav_head -->
+    
+    <div class="main-wrapper">
+        <aside class="left-sidebar">
+            <nav class="left_menu">
+    <div class="left_menu_all_img">
+        <div class="theme-switcher-container">
+            <img class="left_menu_img theme-switcher" src="./img/left_menu/theme-icon.svg" 
+                alt="Сменить тему" title="Поменять тему">
+            <div class="theme-dropdown">
+                <div class="theme-option active" data-theme="color">
+                    <span class="theme-icon blue"></span>
+                    Синяя тема (Текущая)
+                </div>
+                <div class="theme-option" data-theme="white_color">
+                    <span class="theme-icon white"></span>
+                    Белая тема
+                </div>
+                <div class="theme-option" data-theme="dark_color">
+                    <span class="theme-icon dark"></span>
+                    Темная тема
+                </div>
+            </div>
+        </div>
+        
+        <!-- Замените search.png на вашу иконку для анимации курсора -->
+        <div class="cursor-animation-container">
+            <img class="left_menu_img cursor-animation-btn" src="./img/left_menu/cursor-animation.png" 
+                alt="Анимация курсора" title="Включить/выключить анимацию курсора">
+            <div class="cursor-notification" id="cursor-notification"></div>
+        </div>
+        
+        <img class="left_menu_img" src="./img/left_menu/debugging.png" alt="debug">
+        <img class="left_menu_img" src="./img/left_menu/extension.png" alt="extension">
+        <img class="left_menu_img" src="./img/left_menu/share.png" alt="share">     
+        <img class="left_menu_img" src="./img/left_menu/robot.png" alt="robot">
+    </div>
+</nav>
+            
+            <!-- В левой навигации замените этот код: -->
+<nav class="left_nav">
+    <section class="left_nav_sec">
+        <h2 id="left_nav_h2">ПРОВОДНИК</h2>
+        <img id="img_nav_top" src="./img/left_nav/three-dot.png" alt="three-dot">
+    </section>
+    <section class="left_nav_main_sec">
+        <img class="a-d" src="./img/left_nav/arrow-down.png" alt="arrow">
+        <h3 class="left_nav_h3">Мое портфолио</h3>
+        <div class="left_nav_main_sec_all_img">
+            <img class="left_nav_main_sec_img" src="./img/left_nav/add-file_1.png" alt="add-file">
+            <img class="left_nav_main_sec_img" src="./img/left_nav/add-file.png" alt="add-file">
+            <img class="left_nav_main_sec_img" src="./img/left_nav/refresh.png" alt="refresh">
+            <img class="left_nav_main_sec_img" src="./img/left_nav/copy.png" alt="copy">
+        </div>
+    </section>
+    <ul class="left_nav_ul">
+        <li data-tab="about-me">Обо мне</li>
+        <li data-tab="achievements">Достижения</li>
+    </ul>
+    <section class="left_nav_main_sec" id="sec2">
+        <img class="a-d" src="./img/left_nav/arrow-right.png" alt="arrow">
+        <h3 class="left_nav_h3">Структура</h3>
+    </section>
+    <section class="left_nav_main_sec" id="sec3">
+        <img class="a-d" src="./img/left_nav/arrow-right.png" alt="arrow">
+        <h3 class="left_nav_h3">Временная шкала</h3>
+    </section>
+</nav>
+
+        </aside>
+        
+        <div class="right-content">
+            <header class="head_title">
+                <div class="tabs" id="tabs-container">
+                    <!-- Вкладки будут добавляться динамически -->
+                    <div class="tab active" data-tab-id="about-me">
+                        <img class="tab-icon" src="./img/head_title/html.png" alt="html-logo">
+                        <h2>Обо мне</h2>
+                        <img class="close-tab" src="./img/head_title/close.png" alt="close">
+                    </div>
+                </div>
+                <div class="header-icons">
+                    <img src="./img/head_title/door.png" alt="door">
+                    <img src="./img/head_title/three-dot.png" alt="three-dot">
+                </div>
+            </header>
+
+            <main class="main">
+                <nav class="main_nav">
+                    <ul class="path" id="path-container">
+                        <li>Мое портфолио</li>
+                        <li>Обо мне</li>
+                    </ul>
+                </nav>
+                
+                <div class="main_content">
+                    <!-- Заглушка когда нет открытых вкладок -->
+                    <div class="no-tab-content" id="no-tab-content" style="display: none;">
+                        <div class="empty-state">
+                            <h1>Откройте контент!</h1>
+                            <p>Выберите раздел в левой навигации для просмотра информации</p>
+                        </div>
+                    </div>
+                    
+                    <div class="code-editor active" id="about-me-content">
+                        <div class="code-container">
+                            <div class="line-numbers">
+                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                                <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                                <span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+                                <span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+                                <span>21</span><span>22</span><span>23</span><span>24</span><span>25</span>
+                            </div>
+                            
+    <div class="text-content">
+    <h1>Обо мне</h1>
+    
+    <div class="about-me-text-with-photo">
+        <img class="about-me-photo-float" src="./img/self/my-photo.jpg" alt="Мое фото">
+        
+        <h2>Кто я</h2>
+        <p>Я - фронтенд разработчик с 3-летним опытом работы...</p>
+    </div>
+    
+    <h2>Навыки и технологии</h2>
+    <ul>
+        <li>HTML5, CSS3, JavaScript (ES6+)</li>
+        <li>React.js, Vue.js, TypeScript</li>
+        <li>Sass/SCSS, Tailwind CSS, Bootstrap</li>
+        <li>Webpack, Vite, Gulp</li>
+        <li>Git, GitHub, GitLab</li>
+        <li>REST API, GraphQL</li>
+        <li>Figma, Adobe XD, Photoshop</li>
+    </ul>
+    
+    <h2>Профессиональный опыт</h2>
+    
+    <h3>Frontend Developer в "Tech Solutions Inc." (2021-2023)</h3>
+    <p>Разработка и поддержка корпоративного веб-приложения для управления проектами. Основные обязанности включали создание новых компонентов, оптимизацию производительности и взаимодействие с бэкенд-разработчиками.</p>
+    
+    <h3>Веб-разработчик в "Digital Agency Creative Minds" (2019-2021)</h3>
+    <p>Создание лендингов, корпоративных сайтов и интернет-магазинов для различных клиентов. Работа в команде из 5 человек над крупными проектами.</p>
+</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Контент для Достижений -->
+                    <!-- Контент для Достижений -->
+<div class="code-editor" id="achievements-content">
+    <div class="code-container">
+        <div class="line-numbers">
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+            <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+            <span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+            <span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+            <span>21</span><span>22</span><span>23</span><span>24</span><span>25</span>
+            <span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
+        </div>
+        
+        <div class="text-content">
+            <h1>Мои достижения и награды</h1>
+            
+            <div class="achievements-container">
+                <!-- Первое достижение -->
+                <div class="achievement-item">
+                    <div class="achievement-content">
+                        <h3>1. Грамота за активное участие в конкурсе "Веб-Мастер 2023"</h3>
+                        <p>Награжден за создание инновационного веб-приложения с использованием современных технологий HTML5, CSS3 и JavaScript. Конкурс проводился среди студентов IT-специальностей.</p>
+                        <div class="achievement-details">
+                            <p><strong>Дата:</strong> 15 октября 2023 г.</p>
+                            <p><strong>Организатор:</strong> Ассоциация веб-разработчиков России</p>
+                            <p><strong>Номинация:</strong> "Лучший интерактивный интерфейс"</p>
+                        </div>
+                    </div>
+                    <div class="achievement-link">
+                        <a href="./files/certificates/web-master-2023.pdf" target="_blank" class="certificate-link">
+                            <img src="./img/achievements/gramota-web-master.jpg" alt="Грамота Веб-Мастер 2023" class="certificate-img">
+                            <span class="link-text">Посмотреть грамоту (PDF)</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Второе достижение -->
+                <div class="achievement-item">
+                    <div class="achievement-content">
+                        <h3>2. Победа в соревнованиях "Code Challenge 2023"</h3>
+                        <p>Занял первое место в хакатоне по фронтенд-разработке. Создал SPA-приложение для управления задачами с использованием React.js и Redux за 48 часов.</p>
+                        <div class="achievement-details">
+                            <p><strong>Дата:</strong> 20-22 мая 2023 г.</p>
+                            <p><strong>Место проведения:</strong> Онлайн-платформа CodeWars</p>
+                            <p><strong>Количество участников:</strong> 250+ разработчиков</p>
+                            <p><strong>Приз:</strong> Сертификат на курсы по продвинутому JavaScript</p>
+                        </div>
+                    </div>
+                    <div class="achievement-link">
+                        <a href="./files/certificates/code-challenge-victory.pdf" target="_blank" class="certificate-link">
+                            <img src="./img/achievements/diploma-code-challenge.jpg" alt="Диплом Code Challenge 2023" class="certificate-img">
+                            <span class="link-text">Открыть диплом (PDF)</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Третье достижение -->
+                <div class="achievement-item">
+                    <div class="achievement-content">
+                        <h3>3. Сертификат об окончании курса "Frontend Pro"</h3>
+                        <p>Успешно завершил 6-месячный интенсивный курс по современной фронтенд-разработке. Изучил продвинутые техники работы с React, TypeScript, GraphQL и оптимизацией производительности.</p>
+                        <div class="achievement-details">
+                            <p><strong>Дата выдачи:</strong> 10 сентября 2023 г.</p>
+                            <p><strong>Организация:</strong> Яндекс.Практикум</p>
+                            <p><strong>Продолжительность:</strong> 480 часов</p>
+                            <p><strong>Оценка:</strong> 98/100 баллов</p>
+                        </div>
+                    </div>
+                    <div class="achievement-link">
+                        <a href="./files/certificates/frontend-pro-certificate.pdf" target="_blank" class="certificate-link">
+                            <img src="./img/achievements/certificate-frontend-pro.jpg" alt="Сертификат Frontend Pro" class="certificate-img">
+                            <span class="link-text">Скачать сертификат (PDF)</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Четвертое достижение -->
+                <div class="achievement-item">
+                    <div class="achievement-content">
+                        <h3>4. Благодарственное письмо за менторство</h3>
+                        <p>Получил благодарность за активное участие в программе наставничества для начинающих разработчиков. Помог 5 студентам освоить основы веб-разработки и создать свои первые проекты.</p>
+                        <div class="achievement-details">
+                            <p><strong>Дата:</strong> 5 декабря 2023 г.</p>
+                            <p><strong>От кого:</strong> Сообщество "IT-Наставник"</p>
+                            <p><strong>Период работы:</strong> 3 месяца</p>
+                            <p><strong>Отзывы студентов:</strong> 4.9/5.0</p>
+                        </div>
+                    </div>
+                    <div class="achievement-link">
+                        <a href="./files/certificates/mentorship-thanks.pdf" target="_blank" class="certificate-link">
+                            <img src="./img/achievements/mentorship-letter.jpg" alt="Благодарственное письмо" class="certificate-img">
+                            <span class="link-text">Посмотреть письмо (PDF)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Дополнительные достижения -->
+            <h2>Прочие достижения</h2>
+            <ul class="additional-achievements">
+                <li><strong>Участие в конференции "Frontend Conf 2023"</strong> - выступил с докладом "Оптимизация загрузки веб-приложений"</li>
+                <li><strong>Публикация статьи на Habr</strong> - "10 советов по написанию чистого CSS кода" (500+ лайков)</li>
+                <li><strong>Волонтерство на хакатоне "Green Code 2023"</strong> - помогал участникам с техническими вопросами</li>
+                <li><strong>Сертификация от Google</strong> - "Mobile Web Specialist" (получена в 2022 году)</li>
+                <li><strong>Участие в бета-тестировании</strong> - новых версий Chrome DevTools и VS Code расширений</li>
+            </ul>
+            
+            <!-- Статистика -->
+            <div class="achievements-stats">
+                <h2>Статистика достижений</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Завершенных проектов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Наград и сертификатов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Года опыта</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Успешных проектов</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ссылка на полное портфолио достижений -->
+            <div class="achievements-footer">
+                <p>Полное портфолио всех достижений, сертификатов и рекомендательных писем доступно по ссылке:</p>
+                <a href="./files/portfolio-full.pdf" target="_blank" class="full-portfolio-link">
+                    📄 Скачать полное портфолио достижений (PDF, 15 МБ)
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+                    
+                    <!-- Контент для легких проектов -->
+                    <div class="code-editor" id="easy-projects-content">
+                        <div class="code-container">
+                            <div class="line-numbers">
+                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                                <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                            </div>
+                            
+                            <div class="text-content">
+                                <h1>Проекты легкого уровня</h1>
+                                
+                                <h3>1. Weather Dashboard</h3>
+                                <p>Интерактивная панель для отображения погоды с использованием OpenWeatherMap API. Возможность просмотра погоды в разных городах, почасовой прогноз и сохранение избранных локаций.</p>
+                                
+                                <h3>2. Personal Finance Tracker</h3>
+                                <p>Приложение для отслеживания личных финансов с графиками, категориями расходов и целями накопления. Использованы Chart.js для визуализации и LocalStorage для хранения данных.</p>
+                                
+                                <h3>3. Recipe Finder App</h3>
+                                <p>Поисковик рецептов с фильтрацией по ингредиентам, времени приготовления и диетическим ограничениям. Интеграция с Edamam API и возможность сохранения любимых рецептов.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Контент для средних проектов -->
+                    <div class="code-editor" id="medium-projects-content">
+                        <div class="code-container">
+                            <div class="line-numbers">
+                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                                <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                            </div>
+                            
+                            <div class="text-content">
+                                <h1>Проекты среднего уровня</h1>
+                                
+                                <h3>1. Task Management App "TaskFlow"</h3>
+                                <p>Приложение для управления задачами с drag-and-drop интерфейсом, уведомлениями в реальном времени и совместной работой. Реализовано с использованием Vue.js, Vuex и Socket.io.</p>
+                                
+                                <h3>2. Blog Platform "CodeShare"</h3>
+                                <p>Платформа для технических блогов с markdown-редактором, подсветкой синтаксиса и системой комментариев. Аутентификация через GitHub OAuth.</p>
+                                
+                                <h3>3. Real Estate Listing Site</h3>
+                                <p>Сайт для агентства недвижимости с картой объектов, фильтрами поиска и системой записи на просмотр. Адаптивный дизайн для всех устройств.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Контент для сложных проектов -->
+                    <div class="code-editor" id="hard-projects-content">
+                        <div class="code-container">
+                            <div class="line-numbers">
+                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                                <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                            </div>
+                            
+                            <div class="text-content">
+                                <h1>Проекты сложного уровня</h1>
+                                
+                                <h3>1. E-commerce Platform "ShopEasy"</h3>
+                                <p>Полнофункциональная платформа для интернет-магазина с корзиной покупок, системой фильтрации, панелью администратора и интеграцией платежной системы Stripe. Технологии: React, Redux, Node.js, MongoDB.</p>
+                                
+                                <h3>2. Fitness Tracker</h3>
+                                <p>Приложение для отслеживания тренировок, прогресса и питания. Календарь тренировок, статистика и рекомендации по упражнениям.</p>
+                                
+                                <h3>3. Music Player "SoundWave"</h3>
+                                <p>Веб-плеер с плейлистами, эквалайзером и визуализацией аудио. Поддержка форматов MP3, WAV, OGG и интеграция с Last.fm API.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            
+            <footer class="footer">
+                <div class="footer-tabs">
+                    <div class="footer-tab active" data-tab="problems">
+                        <div class="footer-tab-header">
+                            <img src="./img/footer/contact_me.png" alt="contact" class="footer-tab-icon">
+                            <span>Связаться со мной</span>
+                        </div>
+                    </div>
+                    <div class="footer-tab" data-tab="output">
+                        <div class="footer-tab-header">
+                            <img src="./img/footer/output.png" alt="output" class="footer-tab-icon">
+                            <span>OUTPUT</span>
+                        </div>
+                    </div>
+                    <div class="footer-tab" data-tab="debug">
+                        <div class="footer-tab-header">
+                            <img src="./img/footer/debug.png" alt="debug" class="footer-tab-icon">
+                            <span>DEBUG CONSOLE</span>
+                        </div>
+                    </div>
+                    <div class="footer-tab" data-tab="terminal">
+                        <div class="footer-tab-header">
+                            <img src="./img/footer/terminal.png" alt="terminal" class="footer-tab-icon">
+                            <span>TERMINAL</span>
+                        </div>
+                    </div>
+                    <div class="footer-tab" data-tab="comments">
+                        <div class="footer-tab-header">
+                            <img src="./img/footer/comments.png" alt="comments" class="footer-tab-icon">
+                            <span>Коментарии</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-content">
+                    <div class="footer-tab-content active" id="problems-tab">
+                        <p>No problems have been detected in the workspace.</p>
+                    </div>
+                    
+                    <div class="footer-tab-content" id="output-tab">
+                        <p>Output from tasks and extensions will appear here.</p>
+                    </div>
+                    
+                    <div class="footer-tab-content" id="debug-tab">
+                        <p>Debug console is empty. Start a debug session to see output.</p>
+                    </div>
+                    
+                    <div class="footer-tab-content" id="terminal-tab">
+                        <div class="terminal-output">
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">Vikashini@vikas-mi-Natebook-Horizon-edition-15 ~/desktop/vini/todo/my-project $</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="terminal-text">N/A : Version "N/A" is not yet installed.</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="terminal-text">You need to run "nvm install N/A" to install it before using it.</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">Vikashini@vikas-mi-Natebook-Horizon-edition-15 ~/desktop/vini/todo/my-project $</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-tab-content" id="comments-tab">
+                        <p>No comments in the workspace.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+    <script>
+// Функция для установки атрибута темы на body
+function setThemeAttribute(themeName) {
+    document.body.setAttribute('data-theme', themeName);
+}
+
+// Данные для навигации
+const navigationData = {
+    'about-me': {
+        title: 'Обо мне',
+        path: ['Мое портфолио', 'Обо мне'],
+        icon: './img/head_title/html.png'
+    },
+    'achievements': {
+        title: 'Достижения',
+        path: ['Мое портфолио', 'Достижения'],
+        icon: './img/head_title/html.png'
+    },
+    'easy-projects': {
+        title: 'Легкие проекты',
+        path: ['Мое портфолио', 'Мои проекты легкого уровня'],
+        icon: './img/head_title/html.png'
+    },
+    'medium-projects': {
+        title: 'Средние проекты',
+        path: ['Мое портфолио', 'Мои проекты среднего уровня'],
+        icon: './img/head_title/html.png'
+    },
+    'hard-projects': {
+        title: 'Сложные проекты',
+        path: ['Мое портфолио', 'Мои проекты тяжелого уровня'],
+        icon: './img/head_title/html.png'
+    }
+};
+
+// Система вкладок
+class TabSystem {
+    constructor() {
+        this.activeTab = 'about-me';
+        this.tabs = new Set(['about-me']);
+        this.init();
+    }
+    
+    init() {
+        // Начальная настройка
+        this.updateContent();
+        this.addEventListeners();
+    }
+    
+    addEventListeners() {
+        // Навигация в левом меню
+        document.querySelectorAll('.left_nav_ul li').forEach(item => {
+            item.addEventListener('click', (e) => {
+                const tabId = e.currentTarget.getAttribute('data-tab');
+                if (tabId) {
+                    this.openTab(tabId);
+                }
+            });
+        });
+        
+        // Делегирование событий для закрытия вкладок
+        document.querySelector('#tabs-container').addEventListener('click', (e) => {
+            if (e.target.classList.contains('close-tab') || e.target.closest('.close-tab')) {
+                const tab = e.target.closest('.tab');
+                if (tab) {
+                    const tabId = tab.getAttribute('data-tab-id');
+                    this.closeTab(tabId);
+                }
+            }
+            
+            // Переключение между вкладками по клику
+            if (e.target.closest('.tab')) {
+                const tab = e.target.closest('.tab');
+                const tabId = tab.getAttribute('data-tab-id');
+                this.switchToTab(tabId);
+            }
+        });
+    }
+    
+    openTab(tabId) {
+        // Если вкладка уже открыта, просто переключаемся на нее
+        if (this.tabs.has(tabId)) {
+            this.switchToTab(tabId);
+            return;
+        }
+        
+        // Добавляем новую вкладку
+        this.tabs.add(tabId);
+        
+        // Создаем элемент вкладки
+        const tabData = navigationData[tabId];
+        const tabElement = document.createElement('div');
+        tabElement.className = 'tab';
+        tabElement.setAttribute('data-tab-id', tabId);
+        tabElement.innerHTML = `
+            <img class="tab-icon" src="${tabData.icon}" alt="html-logo">
+            <h2>${tabData.title}</h2>
+            <img class="close-tab" src="./img/head_title/close.png" alt="close">
+        `;
+        
+        // Добавляем вкладку в контейнер
+        document.querySelector('#tabs-container').appendChild(tabElement);
+        
+        // Переключаемся на новую вкладку
+        this.switchToTab(tabId);
+        
+        // Показываем контент (скрываем заглушку)
+        document.getElementById('no-tab-content').style.display = 'none';
+    }
+    
+    switchToTab(tabId) {
+        if (!this.tabs.has(tabId)) return;
+        
+        // Обновляем активную вкладку
+        this.activeTab = tabId;
+        
+        // Обновляем классы у вкладок
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.classList.remove('active');
+            if (tab.getAttribute('data-tab-id') === tabId) {
+                tab.classList.add('active');
+            }
+        });
+        
+        // Обновляем контент
+        this.updateContent();
+    }
+    
+    closeTab(tabId) {
+        // Нельзя закрыть последнюю вкладку - вместо этого показываем заглушку
+        if (this.tabs.size === 1) {
+            // Удаляем все вкладки
+            this.tabs.clear();
+            document.querySelector('#tabs-container').innerHTML = '';
+            
+            // Показываем заглушку
+            document.getElementById('no-tab-content').style.display = 'block';
+            
+            // Скрываем весь контент
+            document.querySelectorAll('.code-editor').forEach(editor => {
+                editor.classList.remove('active');
+            });
+            
+            // Очищаем путь
+            this.updatePath([]);
+            return;
+        }
+        
+        // Удаляем вкладку
+        this.tabs.delete(tabId);
+        
+        // Удаляем элемент вкладки
+        const tabElement = document.querySelector(`.tab[data-tab-id="${tabId}"]`);
+        if (tabElement) {
+            tabElement.remove();
+        }
+        
+        // Если закрыли активную вкладку, переключаемся на другую
+        if (this.activeTab === tabId) {
+            const nextTab = Array.from(this.tabs)[0];
+            this.switchToTab(nextTab);
+        }
+    }
+    
+    updateContent() {
+        // Скрываем все контенты
+        document.querySelectorAll('.code-editor').forEach(editor => {
+            editor.classList.remove('active');
+        });
+        
+        // Показываем активный контент
+        const activeContent = document.getElementById(`${this.activeTab}-content`);
+        if (activeContent) {
+            activeContent.classList.add('active');
+        }
+        
+        // Обновляем путь
+        const tabData = navigationData[this.activeTab];
+        if (tabData) {
+            this.updatePath(tabData.path);
+        }
+    }
+    
+    updatePath(pathItems) {
+        const pathContainer = document.getElementById('path-container');
+        pathContainer.innerHTML = '';
+        
+        pathItems.forEach((item, index) => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            
+            // Добавляем последний элемент без разделителя
+            if (index < pathItems.length - 1) {
+                li.style.paddingRight = '15px';
+                li.style.marginRight = '5px';
+                li.style.color = 'var(--text-gray, #8F9BA6)';
+            } else {
+                li.style.color = 'var(--text-light, #fff6f6)';
+                li.style.fontWeight = '600';
+            }
+            
+            pathContainer.appendChild(li);
+        });
+    }
+}
+
+// Функция для смены темы
+function switchTheme(themeName) {
+    const themeLink = document.querySelector('link[href*="color.css"]');
+    const themeOptions = document.querySelectorAll('.theme-option');
+    
+    if (!themeLink) return;
+    
+    // Определяем какой файл подключать
+    let newThemeFile;
+    if (themeName === 'white_color') {
+        newThemeFile = './css/white_color.css';
+    } else if (themeName === 'dark_color') {
+        newThemeFile = './css/dark_color.css';
+    } else {
+        newThemeFile = './css/color.css';
+    }
+    
+    // Меняем ссылку на файл темы
+    themeLink.href = newThemeFile;
+    
+    // Обновляем активную опцию в меню
+    themeOptions.forEach(option => {
+        option.classList.remove('active');
+        if (option.getAttribute('data-theme') === themeName) {
+            option.classList.add('active');
+        }
+    });
+    
+    // Сохраняем выбор пользователя в localStorage
+    localStorage.setItem('portfolio-theme', themeName);
+    
+    // Обновляем текст текущей темы
+    updateThemeText(themeName);
+    
+    // Устанавливаем атрибут темы на body
+    setThemeAttribute(themeName);
+}
+
+// Функция для обновления текста темы
+function updateThemeText(themeName) {
+    const themeOptions = document.querySelectorAll('.theme-option');
+    const themeNames = {
+        'color': 'Синяя тема',
+        'white_color': 'Белая тема',
+        'dark_color': 'Темная тема'
+    };
+    
+    themeOptions.forEach(option => {
+        const theme = option.getAttribute('data-theme');
+        const baseText = themeNames[theme];
+        
+        // Сохраняем иконку
+        const icon = option.querySelector('.theme-icon');
+        
+        // Если это текущая тема, добавляем пометку
+        if (theme === themeName) {
+            option.innerHTML = '';
+            if (icon) option.appendChild(icon);
+            option.appendChild(document.createTextNode(baseText + ' (Текущая)'));
+        } else {
+            option.innerHTML = '';
+            if (icon) option.appendChild(icon);
+            option.appendChild(document.createTextNode(baseText));
+        }
+    });
+}
+
+// Восстановление работы меню тем после смены CSS
+function restoreThemeMenu() {
+    const themeSwitcher = document.querySelector('.theme-switcher');
+    const themeDropdown = document.querySelector('.theme-dropdown');
+    const themeContainer = document.querySelector('.theme-switcher-container');
+    
+    if (!themeContainer || !themeDropdown) return;
+    
+    // Удаляем старые обработчики
+    const newContainer = themeContainer.cloneNode(true);
+    themeContainer.parentNode.replaceChild(newContainer, themeContainer);
+    
+    const newSwitcher = newContainer.querySelector('.theme-switcher');
+    const newDropdown = newContainer.querySelector('.theme-dropdown');
+    
+    // Создаем фон для закрытия меню
+    let backdrop = document.querySelector('.theme-dropdown-backdrop');
+    if (!backdrop) {
+        backdrop = document.createElement('div');
+        backdrop.className = 'theme-dropdown-backdrop';
+        document.body.appendChild(backdrop);
+    }
+    
+    // Функция для показа/скрытия меню
+    function toggleThemeMenu(show) {
+        if (show) {
+            newDropdown.classList.add('show');
+            backdrop.classList.add('active');
+        } else {
+            newDropdown.classList.remove('show');
+            backdrop.classList.remove('active');
+        }
+    }
+    
+    // Обработчик клика по кнопке темы
+    newSwitcher.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isVisible = newDropdown.classList.contains('show');
+        toggleThemeMenu(!isVisible);
+    });
+    
+    // Обработчик клика по опциям тем
+    newContainer.querySelectorAll('.theme-option').forEach(option => {
+        option.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const themeName = this.getAttribute('data-theme');
+            switchTheme(themeName);
+            toggleThemeMenu(false);
+        });
+    });
+    
+    // Закрытие меню при клике вне его
+    backdrop.addEventListener('click', function() {
+        toggleThemeMenu(false);
+    });
+    
+    document.addEventListener('click', function(e) {
+        if (newContainer && !newContainer.contains(e.target) && e.target !== backdrop) {
+            toggleThemeMenu(false);
+        }
+    });
+    
+    // Закрытие меню при нажатии ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            toggleThemeMenu(false);
+        }
+    });
+}
+
+// Обработчик изменения размера окна для меню тем
+function handleThemeMenuResize() {
+    const themeDropdown = document.querySelector('.theme-dropdown');
+    const backdrop = document.querySelector('.theme-dropdown-backdrop');
+    
+    if (!themeDropdown) return;
+    
+    // На мобильных всегда используем fixed позиционирование
+    if (window.innerWidth <= 768) {
+        themeDropdown.style.position = 'fixed';
+        themeDropdown.style.left = '50px';
+        themeDropdown.style.top = '40px';
+    } else {
+        themeDropdown.style.position = 'absolute';
+        themeDropdown.style.left = '45px';
+        themeDropdown.style.top = '0';
+    }
+}
+
+// Инициализация при загрузке
+document.addEventListener('DOMContentLoaded', function() {
+    // Восстанавливаем выбранную тему
+    const savedTheme = localStorage.getItem('portfolio-theme') || 'color';
+    
+    // Устанавливаем тему
+    switchTheme(savedTheme);
+    
+    // Восстанавливаем работу меню тем
+    setTimeout(() => {
+        restoreThemeMenu();
+        handleThemeMenuResize();
+    }, 100);
+    
+    // Обработчик изменения размера окна
+    window.addEventListener('resize', handleThemeMenuResize);
+    
+    // Инициализируем систему вкладок
+    window.tabSystem = new TabSystem();
+    
+    // JavaScript для переключения вкладок футера
+    document.querySelectorAll('.footer-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Убираем активный класс со всех вкладок и контента
+            document.querySelectorAll('.footer-tab, .footer-tab-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Добавляем активный класс нажатой вкладке
+            tab.classList.add('active');
+            
+            // Показываем соответствующий контент
+            const tabId = tab.getAttribute('data-tab');
+            const tabContent = document.getElementById(`${tabId}-tab`);
+            if (tabContent) {
+                tabContent.classList.add('active');
+            }
+        });
+    });
+    
+    // Для поддержки системной темы
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    darkModeMediaQuery.addEventListener('change', e => {
+        if (!localStorage.getItem('portfolio-theme')) {
+            // Если пользователь не выбирал тему вручную
+            const preferredTheme = e.matches ? 'dark_color' : 'white_color';
+            switchTheme(preferredTheme);
+            
+            // Восстанавливаем меню тем
+            setTimeout(() => {
+                restoreThemeMenu();
+            }, 100);
+        }
+    });
+    
+    // Добавляем плавные переходы для всех элементов при смене темы
+    const style = document.createElement('style');
+    style.textContent = `
+        body,
+        .left_menu,
+        .left_nav,
+        .head_title,
+        .main_nav,
+        .footer,
+        .footer-tabs,
+        .footer-content,
+        .code-editor,
+        .text-content,
+        .path,
+        .tab h2,
+        .footer-tab-header,
+        .left_nav_ul li,
+        .left_nav_h3,
+        #left_nav_h2 {
+            transition: background-color 0.5s ease, 
+                       color 0.5s ease, 
+                       border-color 0.5s ease,
+                       filter 0.5s ease;
+        }
+        
+        .left_menu_img,
+        .a-d,
+        #img_nav_top,
+        .left_nav_main_sec_img,
+        #tab2,
+        .header-icons img,
+        .menu-icon,
+        .footer-tab-icon,
+        .file-icon {
+            transition: filter 0.5s ease, transform 0.3s ease;
+        }
+        
+        /* Стили для меню тем */
+        .theme-dropdown {
+            display: none !important;
+        }
+        
+        .theme-dropdown.show {
+            display: block !important;
+            animation: dropdownFadeIn 0.2s ease-out;
+        }
+        
+        @keyframes dropdownFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .theme-dropdown-backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: 99;
+        }
+        
+        .theme-dropdown-backdrop.active {
+            display: block;
+        }
+        
+        /* Для мобильных устройств */
+        @media (max-width: 768px) {
+            .theme-dropdown {
+                position: fixed !important;
+                left: 50px !important;
+                top: 40px !important;
+                z-index: 10000 !important;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+            }
+            
+            body[data-theme="white_color"] .theme-dropdown {
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+            }
+        }
+        
+        /* Для десктопов */
+        @media (min-width: 769px) {
+            .theme-dropdown {
+                position: absolute !important;
+                left: 45px !important;
+                top: 0 !important;
+                z-index: 1000 !important;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+});
+</script>
+    <script>
+        
+    </script>
+<!-- Контейнер для анимации курсора -->
+<div id="cursor-trail"></div>
+<script src="./js/cursor.js"></script>
+<!-- Подключение p5.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+<script src="./js/swap.js"></script>
+</body>
+</html>

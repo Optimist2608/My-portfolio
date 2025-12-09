@@ -1,0 +1,424 @@
+/* color.css - Цветовая схема для портфолио в стиле VS Code */
+
+/* ========== CSS ПЕРЕМЕННЫЕ ========== */
+:root {
+    /* Основные цвета фона */
+    --primary-dark: #002451;
+    --sidebar-dark: #001733;
+    --nav-dark: #001C40;
+    --tab-active: #003566; /* 
+    
+    /* Цвета текста */
+    --text-light: #fff6f6;
+    --text-gray: #8F9BA6;
+    
+    /* Границы и разделители */
+    --border-light: rgba(255, 255, 255, 0.1);
+    
+    /* Акцентные цвета */
+    --terminal-green: #4ec9b0;
+    --code-blue: #569CD6;
+    --code-green: #6A9955;
+    --code-orange: #CE9178;
+    --code-light-blue: #9CDCFE;
+    --code-gray: #D4D4D4;
+    
+    /* Цвета для футера */
+    --problems-red: #f14c4c;
+    --output-blue: #0e639c;
+    --debug-orange: #cc6633;
+    --terminal-teal: #4ec9b0;
+    --comments-green: #6a9955;
+}
+
+/* ========== ОСНОВНЫЕ ЭЛЕМЕНТЫ ========== */
+
+/* Body и основной фон */
+body {
+    background-color: var(--primary-dark);
+}
+
+/* УДАЛЕНО: Стили для .head_shapka и .nav_head */
+
+/* Левое боковое меню */
+.left_menu {
+    background-color: var(--sidebar-dark);
+}
+
+/* Левая навигация */
+.left_nav {
+    background-color: var(--nav-dark);
+    color: var(--text-light);
+}
+
+#left_nav_h2 {
+    color: var(--text-light);
+}
+
+.left_nav_main_sec {
+    background-color: #1A304D;
+}
+
+.left_nav_h3 {
+    color: var(--text-light);
+}
+
+.left_nav_ul li {
+    color: var(--text-light);
+}
+
+.left_nav_ul li::before {
+    filter: brightness(0) invert(1);
+}
+
+/* Стили для выпадающего меню тем */
+.theme-dropdown {
+    background-color: var(--nav-dark);
+    border: 1px solid var(--border-light);
+}
+
+.theme-option {
+    color: var(--text-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.theme-option:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-option.active {
+    background-color: #1A304D;
+    color: var(--code-light-blue);
+}
+
+/* ========== ПРАВАЯ ЧАСТЬ ========== */
+
+/* Верхняя часть с табами */
+.head_title {
+    background-color: var(--nav-dark);
+    border-bottom: 1px solid var(--border-light);
+}
+.tab.active {
+    background-color: var(--tab-active);
+    border-bottom-color: var(--terminal-teal);
+}
+
+.tab {
+    background-color: var(--primary-dark);
+    border: 1px solid var(--border-light);
+}
+
+.tab h2 {
+    color: var(--text-light);
+}
+
+/* Навигация в основном контенте */
+.main_nav {
+    background-color: var(--nav-dark);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.path li:last-child {
+    color: var(--terminal-teal);
+    font-weight: 600;
+}
+
+.path {
+    color: var(--text-light);
+}
+
+.path li:not(:last-child)::after {
+    filter: brightness(0) invert(1) opacity(0.6);
+}
+
+.file-icon {
+    filter: brightness(0) invert(1) opacity(0.8);
+}
+
+.menu-icon {
+    filter: brightness(0) invert(1) opacity(0.6);
+}
+
+.menu-icon:hover {
+    filter: brightness(0) invert(1) opacity(1);
+}
+
+/* Основной контент */
+.main_content {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+}
+
+/* Редактор кода */
+.code-editor {
+    background-color: var(--primary-dark);
+    border: 1px solid var(--border-light);
+}
+
+.line-numbers {
+    background-color: var(--sidebar-dark);
+    color: var(--text-gray);
+    border-right: 1px solid var(--border-light);
+}
+
+.text-content {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+}
+
+/* Стили для текстового контента */
+.text-content h1 {
+    color: var(--text-light);
+    border-bottom: 2px solid var(--border-light);
+}
+
+.text-content h2 {
+    color: var(--code-light-blue);
+}
+
+.text-content h3 {
+    color: var(--code-orange);
+}
+
+.text-content p {
+    color: var(--code-gray);
+}
+
+.text-content li {
+    color: var(--code-gray);
+}
+
+/* Подсветка синтаксиса для кода */
+.tag {
+    color: var(--code-blue);
+}
+
+.attr {
+    color: var(--code-light-blue);
+}
+
+.string {
+    color: var(--code-orange);
+}
+
+.comment {
+    color: var(--code-green);
+}
+
+.text {
+    color: var(--code-gray);
+}
+
+/* ========== ФУТЕР ========== */
+
+.footer {
+    border-top: 1px solid var(--border-light);
+}
+
+.footer-tabs {
+    background-color: var(--nav-dark);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.footer-tab {
+    border-right: 1px solid var(--border-light);
+    color: var(--text-light);
+}
+
+.footer-tab:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.footer-tab.active {
+    background-color: var(--tab-active);
+    border-bottom: 2px solid var(--terminal-teal);
+}
+
+.footer-tab-header {
+    color: var(--text-light);
+}
+
+.footer-content {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+}
+
+/* Цвета границ для вкладок футера */
+.footer-tab[data-tab="problems"] {
+    border-left: 3px solid var(--problems-red);
+}
+
+.footer-tab[data-tab="output"] {
+    border-left: 3px solid var(--output-blue);
+}
+
+.footer-tab[data-tab="debug"] {
+    border-left: 3px solid var(--debug-orange);
+}
+
+.footer-tab[data-tab="terminal"] {
+    border-left: 3px solid var(--terminal-teal);
+}
+
+.footer-tab[data-tab="comments"] {
+    border-left: 3px solid var(--comments-green);
+}
+
+/* Терминал */
+.terminal-prompt {
+    color: var(--terminal-teal);
+}
+
+.terminal-text {
+    color: var(--text-light);
+}
+
+.left_menu_img {
+    filter: brightness(0) invert(1);
+}
+
+.left_menu_img.theme-switcher {
+    filter: brightness(0) invert(1);
+}
+
+/* Иконки в левой навигации */
+.a-d,
+#img_nav_top,
+.left_nav_main_sec_img {
+    filter: brightness(0) invert(1);
+}
+
+/* Иконки в верхней панели - ИСПРАВЛЕНО для html.png */
+#tab1 {
+    /* HTML иконка - сохраняем оригинальный цвет */
+    filter: none;
+}
+
+#tab2,
+.header-icons img {
+    filter: brightness(0) invert(1);
+}
+
+/* Иконки в основной навигации */
+.menu-icon {
+    filter: brightness(0) invert(1) opacity(0.6);
+}
+
+.menu-icon:hover {
+    filter: brightness(0) invert(1) opacity(1);
+}
+
+/* Иконки в футере */
+.footer-tab-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* Иконка файла в основной навигации */
+.file-icon {
+    filter: brightness(0) invert(1) opacity(0.8);
+}
+
+/* ========== ХОВЕР ЭФФЕКТЫ ========== */
+
+/* Эффекты для иконок */
+.left_menu_img:hover,
+.a-d:hover,
+.left_nav_main_sec_img:hover,
+#img_nav_top:hover,
+.header-icons img:hover,
+#tab2:hover {
+    opacity: 0.8;
+}
+
+/* Эффекты для пунктов левой навигации */
+.left_nav_ul li:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Эффекты для вкладок футера */
+.footer-tab:hover .footer-tab-header {
+    color: var(--terminal-teal);
+}
+
+/* ========== АКТИВНЫЕ СОСТОЯНИЯ ========== */
+
+/* Активная вкладка футера */
+.footer-tab.active .footer-tab-header {
+    color: var(--terminal-teal);
+}
+
+/* ========== СКРОЛЛБАРЫ ========== */
+
+/* Основной скроллбар контента */
+.main_content::-webkit-scrollbar-track {
+    background: var(--sidebar-dark);
+}
+
+.main_content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.main_content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,    255, 255, 0.25);
+}
+
+/* Скроллбар текстового контента */
+.text-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.text-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Скроллбар для футера */
+.footer-content::-webkit-scrollbar-track {
+    background: var(--sidebar-dark);
+}
+
+.footer-content::-webkit-scrollbar-thumb {
+    background: var(--border-light);
+}
+
+.footer-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+/* ========== СТИЛИ ДЛЯ ПУТИ НАВИГАЦИИ В СИНЕЙ ТЕМЕ ========== */
+
+.path li {
+    color: var(--text-gray);
+}
+
+.path li:not(:last-child)::after {
+    color: var(--text-gray);
+    opacity: 0.8;
+}
+
+.path li:last-child {
+    color: var(--terminal-teal); /* Бирюзовый для активного элемента */
+}
+
+.path li:nth-child(1) {
+    color: var(--code-light-blue);
+}
+
+.path li:nth-child(2) {
+    color: var(--terminal-teal);
+}
+.theme-dropdown {
+    background-color: var(--nav-dark);
+    border: 1px solid var(--border-light);
+}
+
+.theme-option {
+    color: var(--text-light);
+}
+
+.theme-option:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-option.active {
+    background-color: #1A304D;
+    color: var(--code-light-blue);
+}

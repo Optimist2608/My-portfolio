@@ -1,0 +1,702 @@
+/* white_color.css - Светлая тема с природными цветами */
+
+/* ========== CSS ПЕРЕМЕННЫЕ ========== */
+:root {
+    /* Основные цвета фона (природные цвета) */
+    --primary-light: #f8f9fa;
+    --sidebar-light: #e9f5e9;
+    --nav-light: #ffffff;
+    --header-light: #4a6fa5;
+    --accent-green: #d4edda;
+    --tab-active: #e3f2fd;
+    
+    /* Цвета текста */
+    --text-dark: #2c3e50;
+    --text-gray: #6c757d;
+    --menu-light: #ffffff;
+    --menu-text: #495057;
+    
+    /* Границы и разделители */
+    --border-light: rgba(0, 0, 0, 0.1);
+    
+    /* Природные акцентные цвета */
+    --sky-blue: #4a90e2;
+    --forest-green: #27ae60;
+    --sunset-orange: #e74c3c;
+    --earth-brown: #8d6e63;
+    --sand-beige: #f5e6ca;
+    --ocean-teal: #1abc9c;
+    
+    /* Цвета для футера */
+    --problems-red: #e74c3c;
+    --output-blue: #3498db;
+    --debug-orange: #e67e22;
+    --terminal-teal: #1abc9c;
+    --comments-green: #27ae60;
+}
+
+/* ========== ОСНОВНЫЕ ЭЛЕМЕНТЫ ========== */
+
+/* Body и основной фон */
+body {
+    background-color: var(--primary-light);
+}
+
+/* УДАЛЕНО: Стили для .head_shapka и .nav_head */
+
+/* Левое боковое меню */
+.left_menu {
+    background-color: var(--sidebar-light);
+    border-right: 1px solid var(--border-light);
+}
+
+/* Левая навигация */
+.left_nav {
+    background-color: var(--nav-light);
+    color: var(--text-dark);
+    border-right: 1px solid var(--border-light);
+}
+
+#left_nav_h2 {
+    color: var(--text-dark);
+}
+
+.left_nav_main_sec {
+    background-color: var(--accent-green);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.left_nav_h3 {
+    color: var(--text-dark);
+}
+
+.left_nav_ul li {
+    color: var(--text-dark);
+}
+
+.left_nav_ul li::before {
+    filter: brightness(0.3) sepia(1) hue-rotate(90deg) saturate(3);
+}
+
+/* Стили для выпадающего меню тем */
+.theme-dropdown {
+    background-color: var(--nav-light);
+    border: 1px solid var(--border-light);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.theme-option {
+    color: var(--text-dark);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.theme-option:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--forest-green);
+}
+
+.theme-option.active {
+    background-color: var(--accent-green);
+    color: var(--sky-blue);
+}
+
+.theme-icon.blue {
+    background: linear-gradient(135deg, #002451 50%, #1A304D 50%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.theme-icon.white {
+    background: linear-gradient(135deg, #f8f9fa 50%, #e9f5e9 50%);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* ========== ПРАВАЯ ЧАСТЬ ========== */
+
+/* Верхняя часть с табами */
+.head_title {
+    background-color: var(--nav-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.tab {
+    background-color: var(--tab-active);
+    border: 1px solid var(--border-light);
+}
+
+.tab h2 {
+    color: var(--text-dark);
+}
+.path li:last-child {
+    color: var(--ocean-teal);
+}
+
+/* Навигация в основном контенте */
+.main_nav {
+    background-color: var(--nav-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.path {
+    color: var(--text-dark);
+}
+
+.path li:not(:last-child)::after {
+    filter: brightness(0.3);
+}
+
+.file-icon {
+    filter: brightness(0.3);
+}
+
+.menu-icon {
+    filter: brightness(0.3);
+}
+
+.menu-icon:hover {
+    filter: brightness(0.1);
+}
+
+/* Основной контент */
+.main_content {
+    background-color: var(--primary-light);
+    color: var(--text-dark);
+}
+
+/* Редактор кода */
+.code-editor {
+    background-color: var(--primary-light);
+    border: 1px solid var(--border-light);
+}
+
+.line-numbers {
+    background-color: var(--sidebar-light);
+    color: var(--text-gray);
+    border-right: 1px solid var(--border-light);
+}
+
+.text-content {
+    background-color: var(--primary-light);
+    color: var(--text-dark);
+}
+
+/* Стили для текстового контента */
+.text-content h1 {
+    color: var(--text-dark);
+    border-bottom: 2px solid var(--sky-blue);
+}
+
+.text-content h2 {
+    color: var(--forest-green);
+}
+
+.text-content h3 {
+    color: var(--sunset-orange);
+}
+
+.text-content p {
+    color: var(--text-dark);
+}
+
+.text-content li {
+    color: var(--text-dark);
+}
+
+/* Подсветка синтаксиса для кода */
+.tag {
+    color: var(--sky-blue);
+}
+
+.attr {
+    color: var(--ocean-teal);
+}
+
+.string {
+    color: var(--sunset-orange);
+}
+
+.comment {
+    color: var(--forest-green);
+}
+
+.text {
+    color: var(--text-dark);
+}
+
+/* ========== ФУТЕР ========== */
+
+.footer {
+    border-top: 1px solid var(--border-light);
+    background-color: var(--nav-light);
+}
+
+.footer-tabs {
+    background-color: var(--nav-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.footer-tab {
+    border-right: 1px solid var(--border-light);
+    color: var(--text-dark);
+}
+
+.footer-tab:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.footer-tab.active {
+    background-color: var(--tab-active);
+    border-bottom: 2px solid var(--ocean-teal);
+}
+
+.footer-tab-header {
+    color: var(--text-dark);
+}
+
+.footer-content {
+    background-color: var(--primary-light);
+    color: var(--text-dark);
+}
+
+/* Цвета границ для вкладок футера */
+.footer-tab[data-tab="problems"] {
+    border-left: 3px solid var(--problems-red);
+}
+
+.footer-tab[data-tab="output"] {
+    border-left: 3px solid var(--output-blue);
+}
+
+.footer-tab[data-tab="debug"] {
+    border-left: 3px solid var(--debug-orange);
+}
+
+.footer-tab[data-tab="terminal"] {
+    border-left: 3px solid var(--terminal-teal);
+}
+
+.footer-tab[data-tab="comments"] {
+    border-left: 3px solid var(--comments-green);
+}
+
+/* Терминал */
+.terminal-prompt {
+    color: var(--forest-green);
+}
+
+.terminal-text {
+    color: var(--text-dark);
+}
+
+/* ========== ФИЛЬТРЫ ДЛЯ ИКОНОК ========== */
+
+/* Иконки в левом меню */
+.left_menu_img {
+    filter: brightness(0.7);
+}
+
+.left_menu_img.theme-switcher {
+    filter: brightness(0.7) sepia(1) hue-rotate(180deg) saturate(2);
+}
+
+/* Иконки в левой навигации */
+.a-d,
+#img_nav_top,
+.left_nav_main_sec_img {
+    filter: brightness(0.7);
+}
+
+/* Иконки в верхней панели - ИСПРАВЛЕНО для html.png */
+#tab1 {
+    /* HTML иконка - сохраняем оригинальный цвет */
+    filter: none;
+}
+
+#tab2,
+.header-icons img {
+    filter: brightness(0.7);
+}
+
+/* Иконки в основной навигации */
+.menu-icon {
+    filter: brightness(0.7);
+}
+
+.menu-icon:hover {
+    filter: brightness(0.5);
+}
+
+/* Иконки в футере */
+.footer-tab-icon {
+    filter: brightness(0.7);
+}
+
+/* Иконка файла в основной навигации */
+.file-icon {
+    filter: brightness(0.7);
+}
+
+/* ========== ХОВЕР ЭФФЕКТЫ ========== */
+
+/* Эффекты для иконок */
+.left_menu_img:hover,
+.a-d:hover,
+.left_nav_main_sec_img:hover,
+#img_nav_top:hover,
+.header-icons img:hover,
+#tab2:hover {
+    opacity: 0.8;
+}
+
+/* Эффекты для пунктов левой навигации */
+.left_nav_ul li:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Эффекты для вкладок футера */
+.footer-tab:hover .footer-tab-header {
+    color: var(--ocean-teal);
+}
+
+/* ========== АКТИВНЫЕ СОСТОЯНИЯ ========== */
+
+/* Активная вкладка футера */
+.footer-tab.active .footer-tab-header {
+    color: var(--ocean-teal);
+}
+
+/* ========== СКРОЛЛБАРЫ ========== */
+
+/* Основной скроллбар контента */
+.main_content::-webkit-scrollbar-track {
+    background: var(--sidebar-light);
+}
+
+.main_content::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.main_content::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+/* Скроллбар текстового контента */
+.text-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.text-content::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.text-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Скроллбар для футера */
+.footer-content::-webkit-scrollbar-track {
+    background: var(--sidebar-light);
+}
+
+.footer-content::-webkit-scrollbar-thumb {
+    background: var(--border-light);
+}
+
+.footer-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Скроллбар для чисел строк */
+.line-numbers::-webkit-scrollbar-track {
+    background: var(--sidebar-light);
+}
+
+.line-numbers::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.line-numbers::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* ========== МЕДИА-ЗАПРОСЫ ========== */
+
+@media (max-width: 1200px) {
+    :root {
+        /* Можно изменить цвета для адаптивного дизайна */
+        --primary-light: #f9fafb;
+        --sidebar-light: #edf7ed;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        /* Более светлые оттенки для мобильных */
+        --primary-light: #ffffff;
+        --sidebar-light: #f0f8f0;
+        --border-light: rgba(0, 0, 0, 0.08);
+    }
+}
+
+/* Системная светлая тема по умолчанию */
+@media (prefers-color-scheme: light) {
+    :root {
+        /* Уже настроены для светлой темы */
+    }
+}
+
+/* Для систем, которые предпочитают тёмную тему */
+@media (prefers-color-scheme: dark) {
+    /* Если пользователь не выбрал тему вручную, можно применить тёмную */
+    body:not([data-theme-manual]) {
+        background-color: #002451;
+        color: #fff6f6;
+    }
+}
+
+/* Для выбранной вручную темы */
+body[data-theme="white_color"] {
+    /* Гарантируем, что светлая тема применена */
+    background-color: var(--primary-light) !important;
+    color: var(--text-dark) !important;
+}
+
+body[data-theme="color"] {
+    /* Гарантируем, что тёмная тема применена */
+    background-color: #002451 !important;
+    color: #fff6f6 !important;
+}
+
+/* ========== АНИМАЦИИ ========== */
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.left_menu,
+.left_nav,
+.head_title,
+.main_nav,
+.footer,
+.footer-tabs,
+.footer-content {
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+.text-content,
+.path,
+.tab h2,
+.footer-tab-header {
+    transition: color 0.5s ease;
+}
+
+.line-numbers,
+.code-editor {
+    transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+}
+
+/* ========== ПРИРОДНЫЕ ЦВЕТА ДЛЯ ЭЛЕМЕНТОВ ========== */
+
+/* Эффекты для активных состояний */
+.left_nav_main_sec:hover {
+    background-color: #c3e6cb; /* Светлее акцентного зеленого при наведении */
+}
+
+.footer-tab.active {
+    background-color: #d1ecf1; /* Светлый бирюзовый для активной вкладки футера */
+    border-bottom: 2px solid var(--ocean-teal);
+}
+
+/* Цвета для разных типов текста */
+.text-content strong {
+    color: var(--earth-brown);
+}
+
+.text-content em {
+    color: var(--sky-blue);
+}
+
+.text-content a {
+    color: var(--forest-green);
+    text-decoration: none;
+}
+
+.text-content a:hover {
+    text-decoration: underline;
+    color: var(--ocean-teal);
+}
+
+/* Цвета для списков */
+.text-content ul li::before {
+    color: var(--sunset-orange);
+}
+
+.text-content ol {
+    color: var(--earth-brown);
+}
+
+/* Цвета для блоков цитат */
+.text-content blockquote {
+    border-left: 4px solid var(--sand-beige);
+    background-color: rgba(245, 230, 202, 0.2);
+    padding: 10px 15px;
+    margin: 15px 0;
+    color: var(--earth-brown);
+}
+
+/* Цвета для кода внутри текста */
+.text-content code {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--sunset-orange);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'RobotoMono-Bold', monospace;
+    font-size: 0.9em;
+}
+
+/* Цвета для выделенного текста */
+::selection {
+    background-color: rgba(74, 144, 226, 0.3); /* Полупрозрачный sky-blue */
+    color: var(--text-dark);
+}
+
+/* Цвета для заголовков внутри футера */
+.footer-tab-content h3 {
+    color: var(--forest-green);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Цвета для предупреждений и ошибок в футере */
+.footer-tab-content .error {
+    color: var(--problems-red);
+}
+
+.footer-tab-content .warning {
+    color: var(--debug-orange);
+}
+
+.footer-tab-content .info {
+    color: var(--output-blue);
+}
+
+.footer-tab-content .success {
+    color: var(--comments-green);
+}
+
+/* ========== ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ ТЕРМИНАЛА ========== */
+.terminal-output .command {
+    color: var(--sky-blue);
+    font-weight: bold;
+}
+
+.terminal-output .directory {
+    color: var(--forest-green);
+}
+
+.terminal-output .file {
+    color: var(--ocean-teal);
+}
+
+.terminal-output .error-message {
+    color: var(--problems-red);
+}
+
+.terminal-output .success-message {
+    color: var(--comments-green);
+}
+
+/* Цвета для иконок в зависимости от типа файлов (в левой навигации) */
+.left_nav_ul li[data-file-type="html"]::before {
+    filter: brightness(0.3) sepia(1) hue-rotate(200deg) saturate(3);
+}
+
+.left_nav_ul li[data-file-type="css"]::before {
+    filter: brightness(0.3) sepia(1) hue-rotate(120deg) saturate(3);
+}
+
+.left_nav_ul li[data-file-type="js"]::before {
+    filter: brightness(0.3) sepia(1) hue-rotate(50deg) saturate(3);
+}
+
+.left_nav_ul li[data-file-type="json"]::before {
+    filter: brightness(0.3) sepia(1) hue-rotate(280deg) saturate(3);
+}
+
+/* Цвета для индикаторов состояния */
+.status-indicator.online {
+    background-color: var(--forest-green);
+}
+
+.status-indicator.offline {
+    background-color: var(--problems-red);
+}
+
+.status-indicator.working {
+    background-color: var(--sky-blue);
+}
+
+.status-indicator.paused {
+    background-color: var(--debug-orange);
+}
+.path {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    font-size: 12px;
+    font-family: 'Poppins-regular';
+    width: 100%;
+}
+
+.path li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-right: 15px;
+    margin-right: 5px;
+    color: var(--text-gray);
+    height: 100%;
+}
+
+/* Разделитель между элементами пути */
+.path li:not(:last-child)::after {
+    content: '›';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-gray);
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+/* Последний элемент (активный) */
+.path li:last-child {
+    color: var(--forest-green); /* Зеленый цвет для активного элемента */
+    font-weight: 600;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+/* Ховер эффект для элементов пути */
+.path li:hover {
+    color: var(--ocean-teal);
+}
+
+/* Конкретно для элементов "Мое портфолио" и других */
+.path li:nth-child(1) { /* Первый элемент */
+    color: var(--sky-blue);
+}
+
+.path li:nth-child(2) { /* Второй элемент */
+    color: var(--forest-green);
+}
+body[data-theme="white_color"] .theme-dropdown {
+    background-color: var(--nav-light);
+    border: 1px solid var(--border-light);
+}
+
+body[data-theme="white_color"] .theme-option {
+    color: var(--text-dark);
+}
