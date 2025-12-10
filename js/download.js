@@ -431,29 +431,51 @@ function triggerDownload(url, filename) {
     });
     document.dispatchEvent(startEvent);
     
-    // Создаем временную ссылку для скачивания
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = filename ? `${filename}.zip` : 'project.zip';
-    link.style.display = 'none';
-    
-    // Добавляем в DOM и кликаем
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    
-    // Создаем событие завершения скачивания
-    setTimeout(() => {
-        const completeEvent = new CustomEvent('download-completed', {
-            detail: { 
-                filename: filename, 
-                url: url, 
-                timestamp: new Date(),
-                projectId: getProjectIdFromUrl(url)
-            }
-        });
-        document.dispatchEvent(completeEvent);
-    }, 100);
+    // Проверяем существование файла
+    checkFileExists(url).then(exists => {
+        if (exists) {
+            // Создаем временную ссылку для скачивания
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = filename ? `${filename.replace(/[<>:"/\\|?*]/g, '_')}.zip` : 'project.zip';
+            link.style.display = 'none';
+            
+            // Добавляем в DOM и кликаем
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Создаем событие завершения скачивания
+            setTimeout(() => {
+                const completeEvent = new CustomEvent('download-completed', {
+                    detail: { 
+                        filename: filename, 
+                        url: url, 
+                        timestamp: new Date(),
+                        projectId: getProjectIdFromUrl(url)
+                    }
+                });
+                document.dispatchEvent(completeEvent);
+            }, 100);
+        } else {
+            // Показываем ошибку, если файл не найден
+            showFileNotFoundError(filename, url);
+        }
+    }).catch(error => {
+        console.error('Ошибка при проверке файла:', error);
+        showFileNotFoundError(filename, url);
+    });
+}
+
+// Проверка существования файла
+async function checkFileExists(url) {
+    try {
+        const response = await fetch(url, { method: 'HEAD' });
+        return response.ok;
+    } catch (error) {
+        console.warn(`Файл не найден: ${url}`, error);
+        return false;
+    }
 }
 
 // Получение ID проекта из URL
@@ -514,6 +536,70 @@ function showDownloadNotification(projectTitle) {
     }, 5000);
 }
 
+// Показ ошибки, если файл не найден
+function showFileNotFoundError(projectTitle, url) {
+    // Удаляем предыдущее уведомление
+    const existingNotification = document.querySelector('.download-notification');
+    if (existingNotification) {
+        existingNotification.remove();
+    }
+    
+    // Создаем уведомление об ошибке
+    const notification = document.createElement('div');
+    notification.className = 'download-notification error';
+    
+    const icon = document.createElement('img');
+    icon.src = './img/footer/download-error.png';
+    icon.alt = 'Ошибка';
+    icon.className = 'download-notification-icon';
+    
+    const text = document.createElement('span');
+    text.textContent = `Файл "${projectTitle}" не найден`;
+    
+    const pathText = document.createElement('div');
+    pathText.className = 'download-notification-path';
+    pathText.textContent = `Путь: ${url}`;
+    pathText.style.fontSize = '12px';
+    pathText.style.opacity = '0.8';
+    pathText.style.marginTop = '5px';
+    
+    const closeBtn = document.createElement('button');
+    closeBtn.innerHTML = '&times;';
+    closeBtn.className = 'download-notification-close';
+    closeBtn.addEventListener('click', () => {
+        notification.remove();
+    });
+    
+    notification.appendChild(icon);
+    notification.appendChild(text);
+    notification.appendChild(pathText);
+    notification.appendChild(closeBtn);
+    
+    // Добавляем стиль для ошибки
+    notification.style.backgroundColor = '#f44336';
+    notification.style.borderColor = '#d32f2f';
+    
+    // Добавляем в body
+    document.body.appendChild(notification);
+    
+    // Показываем уведомление
+    setTimeout(() => {
+        notification.classList.add('show');
+    }, 10);
+    
+    // Автоматически скрываем через 8 секунд
+    setTimeout(() => {
+        if (notification.parentNode) {
+            notification.classList.remove('show');
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.remove();
+                }
+            }, 300);
+        }
+    }, 8000);
+}
+
 // Обновление статистики скачиваний
 function updateDownloadStats(projectId) {
     let downloadStats = JSON.parse(localStorage.getItem('download-stats') || '{}');
@@ -570,12 +656,40 @@ document.addEventListener('DOMContentLoaded', function() {
 async function checkDownloadFiles() {
     console.log('Проверка доступности файлов для скачивания...');
     
-    // Можно добавить проверку существования файлов через fetch
-    // Но это требует CORS разрешений на сервере
+    const unavailableFiles = [];
     
-    // Вместо этого просто логируем
-    Object.keys(downloadConfig).forEach(level => {
+    for (const level of Object.keys(downloadConfig)) {
         const levelConfig = downloadConfig[level];
         console.log(`${levelConfig.title}: ${levelConfig.items.length} проектов доступно для скачивания`);
-    });
+        
+        // Проверяем каждый файл
+        for (const project of levelConfig.items) {
+            try {
+                const exists = await checkFileExists(project.downloadLink);
+                if (!exists) {
+                    unavailableFiles.push({
+                        level: levelConfig.title,
+                        project: project.title,
+                        url: project.downloadLink
+                    });
+                }
+            } catch (error) {
+                unavailableFiles.push({
+                    level: levelConfig.title,
+                    project: project.title,
+                    url: project.downloadLink,
+                    error: error.message
+                });
+            }
+        }
+    }
+    
+    if (unavailableFiles.length > 0) {
+        console.warn('Найдены недоступные файлы:', unavailableFiles);
+        
+        // Можно показать предупреждение для пользователя
+        if (unavailableFiles.length > 0) {
+            console.warn(`Внимание: ${unavailableFiles.length} файлов недоступны для скачивания`);
+        }
+    }
 }

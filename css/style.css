@@ -945,7 +945,7 @@ body.show-cursor-trail #cursor-trail {
 
 .certificate-img {
     width: 180px;
-    height: 130px;
+    height: 250px;
     object-fit: cover;
     border-radius: 6px;
     margin-bottom: 8px;
@@ -2000,4 +2000,403 @@ body.show-cursor-trail #cursor-trail {
         top: 0 !important;
         z-index: 1000 !important;
     }
+}
+/* ========== СТИЛИ ДЛЯ ФОТОКОЛЛАЖА В ДОСТИЖЕНИЯХ ========== */
+
+.photo-collage-container {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.collage-main {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    height: 220px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.collage-large {
+    flex: 2;
+    position: relative;
+    overflow: hidden;
+}
+
+.collage-photo-large {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.collage-large:hover .collage-photo-large {
+    transform: scale(1.05);
+}
+
+.collage-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.collage-small {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.collage-photo-small {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.collage-small:hover .collage-photo-small {
+    transform: scale(1.1);
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    color: white;
+    font-size: 10px;
+    padding: 5px 8px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.collage-large:hover .photo-caption,
+.collage-small:hover .photo-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========== СТИЛИ ДЛЯ КНОПОК СКАЧИВАНИЯ ========== */
+
+.presentation-downloads {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.file-download-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.file-download-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.file-download-btn:hover::before {
+    left: 100%;
+}
+
+.file-download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Word кнопка */
+.word-btn {
+    background: linear-gradient(135deg, #2b579a 0%, #1e4a8a 100%);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.word-btn:hover {
+    background: linear-gradient(135deg, #1e4a8a 0%, #173b75 100%);
+    box-shadow: 0 6px 15px rgba(43, 87, 154, 0.3);
+}
+
+/* PowerPoint кнопка */
+.powerpoint-btn {
+    background: linear-gradient(135deg, #d24726 0%, #b33c1e 100%);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.powerpoint-btn:hover {
+    background: linear-gradient(135deg, #b33c1e 0%, #8c2d16 100%);
+    box-shadow: 0 6px 15px rgba(210, 71, 38, 0.3);
+}
+
+/* Иконки файлов */
+.file-icon-container {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+/* УДАЛИТЬ фильтр для иконок - они будут цветными */
+.file-type-icon {
+    width: 24px;
+    height: 24px;
+    /* Удаляем filter: brightness(0) invert(1); чтобы иконки были цветными */
+}
+
+/* Информация о файле */
+.file-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.file-name {
+    font-family: 'Poppins-medium';
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.file-format {
+    font-size: 11px;
+    opacity: 0.9;
+}
+
+.file-size {
+    font-size: 11px;
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 2px 6px;
+    border-radius: 10px;
+    align-self: flex-start;
+    margin-top: 3px;
+}
+
+/* Стрелка скачивания */
+.download-arrow {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.file-download-btn:hover .download-arrow {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(2px);
+}
+
+/* ========== ИСПРАВЛЕНИЕ ВЫРАВНИВАНИЯ ========== */
+
+/* Убедимся, что achievement-item правильно выровнен */
+.achievement-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid;
+    transition: all 0.3s ease;
+    /* Гарантируем, что правый блок не сдвигается */
+    justify-content: space-between;
+    width: 100%;
+}
+
+.achievement-content {
+    flex: 1;
+    margin-right: 30px;
+    min-width: 0; /* Важно для предотвращения переполнения */
+}
+
+/* Для третьего достижения увеличиваем ширину правого блока */
+.achievement-item:nth-child(3) .achievement-link {
+    flex-shrink: 0;
+    width: 320px; /* Фиксированная ширина для фотоколлажа */
+    min-width: 320px; /* Минимальная ширина */
+}
+
+/* Адаптивность для фотоколлажа и кнопок */
+@media (max-width: 768px) {
+    .photo-collage-container {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    .collage-main {
+        height: 180px;
+    }
+    
+    .file-download-btn {
+        padding: 10px 12px;
+    }
+    
+    .file-icon-container {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .file-type-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .file-name {
+        font-size: 13px;
+    }
+    
+    .file-format {
+        font-size: 10px;
+    }
+    
+    .file-size {
+        font-size: 10px;
+        padding: 1px 5px;
+    }
+    
+    .download-arrow {
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+    }
+    
+    /* На мобильных делаем колонку для третьего достижения */
+    .achievement-item:nth-child(3) {
+        flex-direction: column;
+    }
+    
+    .achievement-item:nth-child(3) .achievement-content {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    .achievement-item:nth-child(3) .achievement-link {
+        width: 100%;
+        max-width: 280px;
+        min-width: unset;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .collage-main {
+        height: 150px;
+    }
+    
+    .photo-caption {
+        font-size: 9px;
+        padding: 3px 5px;
+    }
+    
+    .file-download-btn {
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px;
+        text-align: center;
+    }
+    
+    .file-info {
+        align-items: center;
+    }
+    
+    .file-size {
+        align-self: center;
+    }
+    
+    .download-arrow {
+        align-self: center;
+    }
+}
+
+/* Анимация при наведении на весь блок достижения */
+.achievement-item:hover .collage-main {
+    border-color: var(--terminal-teal, #4ec9b0);
+    box-shadow: 0 6px 20px rgba(78, 201, 176, 0.2);
+}
+
+/* ========== ТЕМЫ ДЛЯ ИКОНОК ========== */
+
+/* Синяя тема (color.css) - иконки цветные на белом фоне */
+[data-theme="color"] .file-icon-container {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="color"] .collage-main {
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="color"] .photo-caption {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+}
+
+[data-theme="color"] .achievement-item:hover .collage-main {
+    border-color: var(--terminal-teal, #4ec9b0);
+    box-shadow: 0 6px 20px rgba(78, 201, 176, 0.2);
+}
+
+/* Белая тема (white_color.css) */
+[data-theme="white_color"] .collage-main {
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="white_color"] .photo-caption {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+}
+
+[data-theme="white_color"] .file-icon-container {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="white_color"] .achievement-item:hover .collage-main {
+    border-color: var(--ocean-teal, #1abc9c);
+    box-shadow: 0 6px 20px rgba(26, 188, 156, 0.2);
+}
+
+/* Темная тема (dark_color.css) */
+[data-theme="dark_color"] .collage-main {
+    border-color: #30363d;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark_color"] .photo-caption {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+[data-theme="dark_color"] .file-icon-container {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark_color"] .achievement-item:hover .collage-main {
+    border-color: var(--accent-blue, #58a6ff);
+    box-shadow: 0 6px 20px rgba(88, 166, 255, 0.2);
 }
