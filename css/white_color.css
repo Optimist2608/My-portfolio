@@ -3,16 +3,22 @@
 /* ========== CSS ПЕРЕМЕННЫЕ ========== */
 :root {
     /* Основные цвета фона (природные цвета) */
-    --download-card-bg: rgba(255, 255, 255, 0.05);
---download-card-border: rgba(255, 255, 255, 0.1);
---download-card-hover-border: var(--terminal-teal);
---tech-tag-bg: rgba(78, 201, 176, 0.15);
---tech-tag-text: var(--terminal-teal);
---tech-tag-border: rgba(78, 201, 176, 0.3);
---download-btn-bg: var(--terminal-teal);
---download-btn-text: var(--primary-dark);
---download-info-bg: rgba(0, 0, 0, 0.2);
---download-info-border: var(--terminal-teal);
+    --download-card-bg: rgba(255, 255, 255, 0.9);
+    --download-card-border: rgba(0, 0, 0, 0.1);
+    --download-card-hover-border: #1abc9c;
+    --tech-tag-bg: rgba(26, 188, 156, 0.15);
+    --tech-tag-text: #1abc9c;
+    --tech-tag-border: rgba(26, 188, 156, 0.3);
+    --download-btn-bg: #1abc9c;
+    --download-btn-text: #ffffff;
+    --download-info-bg: rgba(0, 0, 0, 0.05);
+    --download-info-border: #1abc9c;
+    --notification-bg: #f8f9fa;
+    --notification-border: #1abc9c;
+    --download-card-title: #2c3e50;
+    --download-card-desc: #6c757d;
+    --download-counter-bg: #1abc9c;
+    --download-counter-text: #ffffff;
 --notification-bg: var(--primary-dark);
 --notification-border: var(--terminal-teal);
     --primary-light: #f8f9fa;
@@ -667,25 +673,248 @@ body {
 
 .download-card:hover {
     border-color: var(--download-card-hover-border);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.download-card-content h4 {
+    color: var(--download-card-title) !important;
+    font-weight: 600;
+}
+
+.download-card-desc {
+    color: var(--download-card-desc) !important;
 }
 
 .tech-tag {
     background-color: var(--tech-tag-bg);
     color: var(--tech-tag-text);
     border: 1px solid var(--tech-tag-border);
+    font-weight: 500;
+}
+
+.download-card-size {
+    color: var(--text-gray);
+    font-weight: 500;
 }
 
 .download-btn {
     background-color: var(--download-btn-bg);
     color: var(--download-btn-text);
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn:hover {
+    background-color: #16a085;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(26, 188, 156, 0.4);
+}
+
+.download-btn-icon {
+    filter: brightness(0) invert(1);
 }
 
 .download-info, .download-instructions {
     background-color: var(--download-info-bg);
     border-left: 4px solid var(--download-info-border);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.download-info h4, .download-instructions h4 {
+    color: var(--forest-green) !important;
+    font-weight: 600;
+}
+
+.download-info li, .download-instructions li {
+    color: var(--text-dark) !important;
+}
+
+.download-info code, .download-instructions code {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #e74c3c;
+    font-weight: 600;
 }
 
 .download-notification {
     background-color: var(--notification-bg);
     border: 1px solid var(--notification-border);
+    color: var(--text-dark);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.download-notification span {
+    color: var(--text-dark) !important;
+    font-weight: 500;
+}
+
+.download-notification-close {
+    color: var(--text-gray);
+}
+
+.download-notification-close:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--text-dark);
+}
+
+.download-notification.error {
+    background-color: #f44336;
+    border-color: #d32f2f;
+    color: white;
+}
+
+.download-notification.error span {
+    color: white !important;
+}
+
+.download-notification.error .download-notification-close {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.download-notification.error .download-notification-close:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.download-counter {
+    background-color: var(--download-counter-bg) !important;
+    color: var(--download-counter-text) !important;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+/* Улучшенные стили для загрузки */
+.download-btn.loading {
+    background-color: #16a085;
+}
+
+.download-btn.loading::after {
+    border: 2px solid #ffffff;
+    border-top-color: transparent;
+}
+
+/* Улучшенные стили для скроллбара в белой теме */
+.download-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.download-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.download-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+/* Стили для иконки загрузки */
+.download-btn-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+/* Стили для сетки проектов */
+.download-grid {
+    gap: 20px;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .download-card {
+        padding: 15px;
+    }
+    
+    .download-btn {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+    
+    .download-card-content h4 {
+        font-size: 15px;
+    }
+}
+
+/* Стили для уровня сложности */
+.download-level-header {
+    color: var(--text-dark);
+    border-bottom: 2px solid var(--ocean-teal);
+    font-weight: 600;
+}
+
+.download-header {
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.download-description {
+    color: var(--text-gray);
+    font-size: 15px;
+    line-height: 1.6;
+}
+/* Стили для раздела информации о сайте */
+.site-info-content {
+    color: var(--text-dark);
+}
+
+.info-section h3 {
+    color: var(--sky-blue);
+}
+
+.info-value {
+    color: var(--forest-green);
+}
+
+.tech-tag {
+    background-color: rgba(26, 188, 156, 0.1);
+    color: var(--ocean-teal);
+    border-color: rgba(26, 188, 156, 0.3);
+}
+
+.update-date {
+    color: var(--sunset-orange);
+}
+[data-theme="white_color"] .contact-card {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="white_color"] .contact-card:hover {
+    border-color: var(--card-accent);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="white_color"] .contact-icon {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="white_color"] .contact-icon img {
+    filter: none !important;
+}
+
+[data-theme="white_color"] .contact-info h4 {
+    color: var(--text-light);
+}
+
+[data-theme="white_color"] .contact-desc {
+    color: var(--text-light);
+}
+
+[data-theme="white_color"] .contact-link {
+    background-color: rgba(0, 0, 0, 0.08);
+    color: var(--text-light);
+}
+
+[data-theme="white_color"] .contact-value {
+    color: var(--text-light);
+}
+
+[data-theme="white_color"] .contacts-info {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="white_color"] .time-label,
+[data-theme="white_color"] .time-value {
+    color: var(--text-light);
 }

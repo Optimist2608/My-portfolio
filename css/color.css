@@ -658,3 +658,59 @@ body {
     background-color: var(--notification-bg);
     border: 1px solid var(--notification-border);
 }
+/* Стили для раздела информации о сайте */
+.site-info-content {
+    color: var(--text-light);
+}
+
+.info-section h3 {
+    color: var(--code-light-blue);
+}
+
+.info-value {
+    color: var(--terminal-teal);
+}
+
+.tech-tag {
+    background-color: rgba(78, 201, 176, 0.1);
+    color: var(--terminal-teal);
+    border-color: rgba(78, 201, 176, 0.3);
+}
+
+.update-date {
+    color: var(--code-orange);
+}
+/* Исправление для иконок контактов в синей теме */
+[data-theme="color"] .contacts-content {
+    color: var(--text-light);
+}
+
+[data-theme="color"] .contact-icon img {
+    filter: none !important;
+}
+
+[data-theme="color"] .contact-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="color"] .contact-card:hover {
+    border-color: var(--card-accent);
+}
+
+[data-theme="color"] .contact-info h4 {
+    color: var(--text-light);
+}
+
+[data-theme="color"] .contact-desc {
+    color: var(--text-light);
+}
+
+[data-theme="color"] .contact-value {
+    color: var(--text-light);
+}
+
+[data-theme="color"] .time-label,
+[data-theme="color"] .time-value {
+    color: var(--text-light);
+}

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/swap.css">
     <link rel="icon" type="image/x-icon" href="./img/logo.ico">
     <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/site-info.css">
+    <link rel="stylesheet" href="./css/contacts.css">
     <meta name="theme-color" content="#002451">
 </head>
 <body>
@@ -477,76 +479,188 @@
             </main>
             
             <footer class="footer">
-                <div class="footer-tabs">
-                    <div class="footer-tab active" data-tab="problems">
-                        <div class="footer-tab-header">
-                            <img src="./img/footer/contact_me.png" alt="contact" class="footer-tab-icon">
-                            <span>Связаться со мной</span>
-                        </div>
+    <div class="footer-tabs">
+        <div class="footer-tab active" data-tab="problems">
+            <div class="footer-tab-header">
+                <img src="./img/footer/contact_me.png" alt="contact" class="footer-tab-icon">
+                <span>Связаться со мной</span>
+            </div>
+        </div>
+        <div class="footer-tab" data-tab="output">
+            <div class="footer-tab-header">
+                <img src="./img/footer/download-icon.png" alt="download" class="footer-tab-icon">
+                <span>Скачать мои работы</span>
+            </div>
+        </div>
+        <div class="footer-tab" data-tab="site-info">
+            <div class="footer-tab-header">
+                <img src="./img/footer/info.png" alt="info" class="footer-tab-icon">
+                <span>Информация о сайте</span>
+            </div>
+        </div>
+        <div class="footer-tab" data-tab="comments">
+            <div class="footer-tab-header">
+                <img src="./img/footer/comment.png" alt="comments" class="footer-tab-icon">
+                <span>Коментарии</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-tab-content active" id="problems-tab">
+    <div class="contacts-content">
+        <div class="contacts-header">
+            <h3>📧 Мои контакты</h3>
+            <p>Свяжитесь со мной любым удобным способом</p>
+        </div>
+        
+        <div class="contacts-grid">
+            <!-- Email -->
+            <div class="contact-card email-card">
+                <div class="contact-icon">
+                    <img src="./img/contacts/email-icon.png" alt="Email">
+                </div>
+                <div class="contact-info">
+                    <h4>Email</h4>
+                    <p class="contact-desc">Основной способ связи</p>
+                    <a href="mailto:akkMakara@mail.ru" class="contact-link" data-copy="akkMakara@mail.ru">
+                        <span class="contact-value">akkMakara@mail.ru</span>
+                        <span class="copy-icon" title="Скопировать">📋</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Telegram -->
+            <div class="contact-card telegram-card">
+                <div class="contact-icon">
+                    <img src="./img/contacts/telegram-icon.png" alt="Telegram">
+                </div>
+                <div class="contact-info">
+                    <h4>Telegram</h4>
+                    <p class="contact-desc">Быстрые сообщения</p>
+                    <a href="https://t.me/DeadRead7" target="_blank" class="contact-link" data-copy="@DeadRead7">
+                        <span class="contact-value">@DeadRead7</span>
+                        <span class="copy-icon" title="Скопировать">📋</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Discord -->
+            <div class="contact-card discord-card">
+                <div class="contact-icon">
+                    <img src="./img/contacts/discord-icon.png" alt="Discord">
+                </div>
+                <div class="contact-info">
+                    <h4>Discord</h4>
+                    <p class="contact-desc">Для игр и разработки</p>
+                    <div class="contact-link" data-copy="nooptimist">
+                        <span class="contact-value">nooptimist</span>
+                        <span class="copy-icon" title="Скопировать">📋</span>
                     </div>
-                    <div class="footer-tab" data-tab="output">
-    <div class="footer-tab-header">
-        <img src="./img/footer/download-icon.png" alt="download" class="footer-tab-icon">
-        <span>Скачать мои работы</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contacts-info">
+            <h4>⏱️ Время ответа</h4>
+            <div class="response-time">
+                <div class="time-item">
+                    <span class="time-label">Email:</span>
+                    <span class="time-value">В течение 24 часов</span>
+                </div>
+                <div class="time-item">
+                    <span class="time-label">Telegram:</span>
+                    <span class="time-value">В течение 1-2 часов</span>
+                </div>
+                <div class="time-item">
+                    <span class="time-label">Discord:</span>
+                    <span class="time-value">В течение 1 часа</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-footer">
+            <p>✉️ <strong>Предпочитаемый способ связи:</strong> Email для деловых предложений, Telegram для быстрых вопросов</p>
+        </div>
     </div>
 </div>
-                    <div class="footer-tab" data-tab="debug">
-                        <div class="footer-tab-header">
-                            <img src="./img/footer/debug.png" alt="debug" class="footer-tab-icon">
-                            <span>DEBUG CONSOLE</span>
-                        </div>
+        
+        <div class="footer-tab-content" id="output-tab">
+            <!-- Содержимое будет сгенерировано JavaScript -->
+        </div>
+        
+        <div class="footer-tab-content" id="site-info-tab">
+            <div class="site-info-content">
+                <div class="info-section">
+                    <h3>📊 Статистика сайта</h3>
+                    <div class="info-item">
+                        <span class="info-label">Последнее обновление:</span>
+                        <span id="last-updated" class="info-value">Загрузка...</span>
                     </div>
-                    <div class="footer-tab" data-tab="terminal">
-                        <div class="footer-tab-header">
-                            <img src="./img/footer/terminal.png" alt="terminal" class="footer-tab-icon">
-                            <span>TERMINAL</span>
-                        </div>
+                    <div class="info-item">
+                        <span class="info-label">Всего страниц:</span>
+                        <span class="info-value">3 основные страницы</span>
                     </div>
-                    <div class="footer-tab" data-tab="comments">
-                        <div class="footer-tab-header">
-                            <img src="./img/footer/comments.png" alt="comments" class="footer-tab-icon">
-                            <span>Коментарии</span>
-                        </div>
+                    <div class="info-item">
+                        <span class="info-label">Код проекта:</span>
+                        <span class="info-value">HTML5, CSS3, JavaScript</span>
                     </div>
                 </div>
                 
-                <div class="footer-content">
-                    <div class="footer-tab-content active" id="problems-tab">
-                        <p>No problems have been detected in the workspace.</p>
+                <div class="info-section">
+                    <h3>🚀 Производительность</h3>
+                    <div class="info-item">
+                        <span class="info-label">Размер проекта:</span>
+                        <span id="project-size" class="info-value">Загрузка...</span>
                     </div>
-                    
-                    
-
-<div class="footer-tab-content" id="output-tab">
-    <!-- Содержимое будет сгенерировано JavaScript -->
-</div>
-                    
-                    <div class="footer-tab-content" id="debug-tab">
-                        <p>Debug console is empty. Start a debug session to see output.</p>
+                    <div class="info-item">
+                        <span class="info-label">Время загрузки:</span>
+                        <span id="load-time" class="info-value">Загрузка...</span>
                     </div>
-                    
-                    <div class="footer-tab-content" id="terminal-tab">
-                        <div class="terminal-output">
-                            <div class="terminal-line">
-                                <span class="terminal-prompt">Vikashini@vikas-mi-Natebook-Horizon-edition-15 ~/desktop/vini/todo/my-project $</span>
-                            </div>
-                            <div class="terminal-line">
-                                <span class="terminal-text">N/A : Version "N/A" is not yet installed.</span>
-                            </div>
-                            <div class="terminal-line">
-                                <span class="terminal-text">You need to run "nvm install N/A" to install it before using it.</span>
-                            </div>
-                            <div class="terminal-line">
-                                <span class="terminal-prompt">Vikashini@vikas-mi-Natebook-Horizon-edition-15 ~/desktop/vini/todo/my-project $</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="footer-tab-content" id="comments-tab">
-                        <p>No comments in the workspace.</p>
+                    <div class="info-item">
+                        <span class="info-label">Оптимизация:</span>
+                        <span class="info-value">Оптимизирован для быстрой загрузки</span>
                     </div>
                 </div>
-            </footer>
+                
+                <div class="info-section">
+                    <h3>🔧 Технологии</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Flexbox</span>
+                        <span class="tech-tag">Grid</span>
+                        <span class="tech-tag">Responsive</span>
+                        <span class="tech-tag">Font Awesome</span>
+                        <span class="tech-tag">p5.js</span>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>📈 История обновлений</h3>
+                    <div class="update-history">
+                        <div class="update-item">
+                            <span class="update-date" id="last-change-date">Загрузка...</span>
+                            <span class="update-description">Последнее изменение сайта</span>
+                        </div>
+                        <div class="update-item">
+                            <span class="update-date">Декабрь 2025</span>
+                            <span class="update-description">Добавлены проекты начального уровня</span>
+                        </div>
+                        <div class="update-item">
+                            <span class="update-date">Декабрь 2025</span>
+                            <span class="update-description">Запуск портфолио</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-tab-content" id="comments-tab">
+            <p>No comments in the workspace.</p>
+        </div>
+    </div>
+</footer>
         </div>
     </div>
     
@@ -1177,9 +1291,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- Контейнер для анимации курсора -->
 <div id="cursor-trail"></div>
 <script src="./js/cursor.js"></script>
-<!-- Подключение p5.js -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
 <script src="./js/swap.js"></script>
 <script src="./js/download.js"></script>
+<script src="./js/site-info.js"></script>
+<script src="./js/contacts.js"></script>
 </body>
 </html>

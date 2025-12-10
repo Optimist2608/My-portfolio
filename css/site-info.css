@@ -1,0 +1,299 @@
+
+/* site-info.css - Стили для раздела информации о сайте */
+
+.site-info-content {
+    padding: 15px;
+    font-family: 'Poppins-regular', sans-serif;
+    font-size: 13px;
+    color: inherit;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.site-info-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.site-info-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.site-info-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+}
+
+.site-info-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.info-section {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.info-section h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: inherit;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-section h3::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.info-section:nth-child(1) h3::before {
+    background-image: url('../img/footer/stats-icon.png');
+}
+
+.info-section:nth-child(2) h3::before {
+    background-image: url('../img/footer/performance-icon.png');
+}
+
+.info-section:nth-child(3) h3::before {
+    background-image: url('../img/footer/tech-icon.png');
+}
+
+.info-section:nth-child(4) h3::before {
+    background-image: url('../img/footer/history-icon.png');
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: background-color 0.2s ease;
+}
+
+.info-item:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.info-label {
+    color: inherit;
+    opacity: 0.9;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.info-value {
+    color: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: right;
+    max-width: 60%;
+    word-break: break-word;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tech-tag {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: inherit;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.update-history {
+    margin-top: 10px;
+}
+
+.update-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.update-item:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    transform: translateX(5px);
+}
+
+.update-date {
+    font-weight: 600;
+    font-size: 12px;
+    color: inherit;
+    min-width: 120px;
+    flex-shrink: 0;
+}
+
+.update-description {
+    font-size: 12px;
+    color: inherit;
+    opacity: 0.9;
+    text-align: right;
+    flex: 1;
+    margin-left: 15px;
+}
+
+/* Анимация загрузки */
+.info-value:contains("Загрузка") {
+    position: relative;
+    overflow: hidden;
+}
+
+.info-value:contains("Загрузка")::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    animation: loadingPulse 2s infinite;
+}
+
+@keyframes loadingPulse {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Для светлой темы */
+[data-theme="white_color"] .info-item {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="white_color"] .info-item:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="white_color"] .tech-tag {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="white_color"] .tech-tag:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="white_color"] .update-item {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="white_color"] .update-item:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Для темной темы */
+[data-theme="dark_color"] .info-item {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark_color"] .info-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .site-info-content {
+        padding: 10px;
+    }
+    
+    .info-section {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        padding: 10px;
+    }
+    
+    .info-label, .info-value {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .info-value {
+        font-size: 13px;
+    }
+    
+    .update-item {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .update-date, .update-description {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .tech-tags {
+        gap: 6px;
+    }
+    
+    .tech-tag {
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+}
+.refresh-size-btn {
+    margin-left: 8px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.refresh-size-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: rotate(180deg);
+}
+
+.refresh-size-btn.loading {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

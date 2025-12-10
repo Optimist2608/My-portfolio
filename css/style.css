@@ -623,6 +623,8 @@ body {
 }
 
 .footer-content {
+    position: relative;
+    z-index: 10;
     flex: 1;
     padding: 15px;
     overflow-y: auto;
@@ -631,7 +633,7 @@ body {
     width: 100%;
     min-height: 0;
     transition: all 0.3s ease;
-    opacity: 0;
+    opacity: 0  ;
     transform: translateY(-10px);
     display: none;
 }
@@ -641,6 +643,9 @@ body {
 }
 
 .footer-tab-content {
+        position: relative;
+    z-index: 11;
+
     display: none;
     height: 100%;
     overflow-y: auto;

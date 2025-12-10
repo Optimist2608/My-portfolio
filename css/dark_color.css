@@ -745,3 +745,60 @@ body {
     background-color: var(--notification-bg);
     border: 1px solid var(--notification-border);
 }
+/* Стили для раздела информации о сайте */
+.site-info-content {
+    color: var(--text-light);
+}
+
+.info-section h3 {
+    color: var(--accent-blue);
+}
+
+.info-value {
+    color: var(--accent-green);
+}
+
+.tech-tag {
+    background-color: rgba(88, 166, 255, 0.1);
+    color: var(--accent-blue);
+    border-color: rgba(88, 166, 255, 0.3);
+}
+
+.update-date {
+    color: var(--accent-orange);
+}
+/* Контакты для темной темы */
+/* Исправление для иконок контактов в темной теме */
+[data-theme="dark_color"] .contacts-content {
+    color: var(--text-light);
+}
+
+[data-theme="dark_color"] .contact-icon img {
+    filter: none !important;
+}
+
+[data-theme="dark_color"] .contact-card {
+    background-color: rgba(22, 27, 34, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark_color"] .contact-card:hover {
+    border-color: var(--card-accent);
+}
+
+[data-theme="dark_color"] .contact-info h4 {
+    color: var(--text-light);
+}
+
+[data-theme="dark_color"] .contact-desc {
+    color: var(--text-light);
+}
+
+[data-theme="dark_color"] .contact-value {
+    color: var(--text-light);
+}
+
+[data-theme="dark_color"] .time-label,
+[data-theme="dark_color"] .time-value {
+    color: var(--text-light);
+} 
