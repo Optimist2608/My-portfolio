@@ -155,9 +155,148 @@ const projectsConfig = {
     },
     
     // Средние проекты
-    'medium-projects': {
+     'medium-projects': {
         title: 'Мои проекты среднего уровня',
-        items: []
+        items: [
+            {
+                id: 'medium-1',
+                title: 'Карточная игра',
+                path: './medium_work/HW1/Card_game/index.html',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-2',
+                title: 'HTML Tutorial',
+                path: './medium_work/HW1/HTML_Tutorial/index.html',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-3',
+                title: 'Romeo and Juliet',
+                path: './medium_work/HW1/romeo_and_juliet/index.html',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-4',
+                title: 'Lorem Ipsum',
+                path: './medium_work/HW2/Lorem_Ipsum/index.html',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-5',
+                title: 'Математические формулы',
+                path: './medium_work/HW2/Mathematical_formulas/index.html',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-6',
+                title: 'Транспорт',
+                path: './medium_work/HW2/Vehicle/index.html',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-7',
+                title: 'Верстка',
+                path: './medium_work/HW3/index.html', // Корректный путь для HW3
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-8',
+                title: 'Список фруктов (HW4-Task1)',
+                path: './medium_work/HW4/Task1/index.html',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-9',
+                title: 'Список дел (HW4-Task2)',
+                path: './medium_work/HW4/Task2/index.html',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-10',
+                title: 'Значение слова "TAG" (HW4-Task3)',
+                path: './medium_work/HW4/Task3/index.html',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-11',
+                title: 'Галерея телефонов (HW5-1)',
+                path: './medium_work/HW5/1/index.html',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-12',
+                title: 'Выпадающее меню (HW5)',
+                path: './medium_work/HW5/index.html', // Корректный путь для HW5
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-13',
+                title: 'Верстка (HW6)',
+                path: './medium_work/HW6/index.html', // Корректный путь для HW6
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-14',
+                title: 'Мой холодильник (HW7-1)',
+                path: './medium_work/HW7/1/index.html',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-15',
+                title: 'Список иконок (HW7-2)',
+                path: './medium_work/HW7/2/index.html',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-16',
+                title: 'Таблица в скролле (HW7-3)',
+                path: './medium_work/HW7/3/index.html',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-17',
+                title: 'Верстка (HW8)',
+                path: './medium_work/HW8/index.html', // Корректный путь для HW8
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-18',
+                title: 'Квадрат и прямоугольник (HW9-1)',
+                path: './medium_work/HW9/1/index.html',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-19',
+                title: 'Шутка дня (HW9-2)',
+                path: './medium_work/HW9/2 Shutka/index.html',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-20',
+                title: 'Блок с SVG (HW9-3)',
+                path: './medium_work/HW9/3/index.html',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-21',
+                title: 'Перемещение фигур (HW10-1)',
+                path: './medium_work/HW10/1/index.html',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-22',
+                title: 'Анимированное сердце (HW10-2)',
+                path: './medium_work/HW10/2/index.html',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-23',
+                title: 'SVG + Анимации (HW10-3)',
+                path: './medium_work/HW10/3/index.html',
+                icon: './img/head_title/html.png'
+            },
+        ]
     },
     
     // Сложные проекты

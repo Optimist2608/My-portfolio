@@ -11,7 +11,7 @@ const downloadConfig = {
                 description: 'Первый сайт созданный во время обучения',
                 downloadLink: './light_work/work1.zip',
                 technologies: ['HTML', 'CSS'],
-                size: '2.4 MB',
+                size: '0.4 MB', // Оценка: work1/index.html, style.css, img/mammoth.png (небольшое)
                 icon: './img/head_title/html.png'
             },
             {
@@ -19,7 +19,7 @@ const downloadConfig = {
                 title: 'Знакомство с HTML и CSS(2)',
                 downloadLink: './light_work/work2.zip',
                 technologies: ['HTML', 'CSS'],
-                size: '3.1 MB',
+                size: '0.3 MB', // Оценка: work2/index.html, style.css, img/icoBerry.png (небольшое)
                 icon: './img/head_title/html.png'
             },
             {
@@ -27,7 +27,7 @@ const downloadConfig = {
                 title: 'Знакомство с HTML и CSS(3)',
                 downloadLink: './light_work/work3.zip',
                 technologies: ['HTML', 'CSS'],
-                size: '1.8 MB',
+                size: '0.4 MB', // Оценка: work3/index.html, style.css, img/bober.png (небольшое)
                 icon: './img/head_title/html.png'
             },
             {
@@ -35,7 +35,7 @@ const downloadConfig = {
                 title: 'Знакомство с HTML и CSS(4)',
                 downloadLink: './light_work/work4.zip',
                 technologies: ['HTML', 'CSS'],
-                size: '2.7 MB',
+                size: '0.8 MB', // Оценка: work4/index.html, page2.html, style.css, Text/Text.txt, img/Screenshot_1.jpg, Desktop 2025.11.07 - 20.56.52.02.mp4 (видео может быть больше)
                 icon: './img/head_title/html.png'
             },
             {
@@ -43,7 +43,7 @@ const downloadConfig = {
                 title: 'Шрифты',
                 downloadLink: './light_work/work5.zip',
                 technologies: ['HTML', 'CSS', 'Шрифты'],
-                size: '4.2 MB',
+                size: '1.2 MB', // Оценка: work5/index.html, style.css, fonts (несколько файлов шрифтов)
                 icon: './img/head_title/html.png'
             },
             {
@@ -51,7 +51,7 @@ const downloadConfig = {
                 title: 'Таблицы(1)',
                 downloadLink: './light_work/work6.zip',
                 technologies: ['HTML', 'CSS', 'Таблицы'],
-                size: '1.9 MB',
+                size: '0.5 MB', // Оценка: work6/index.html, style.css, img/car90_42507.png
                 icon: './img/head_title/html.png'
             },
             {
@@ -59,7 +59,7 @@ const downloadConfig = {
                 title: 'Таблицы(2)',
                 downloadLink: './light_work/work7.zip',
                 technologies: ['HTML', 'CSS', 'Таблицы'],
-                size: '2.3 MB',
+                size: '0.3 MB', // Оценка: work7/index.html, style.css
                 icon: './img/head_title/html.png'
             },
             {
@@ -67,7 +67,7 @@ const downloadConfig = {
                 title: 'Цвет фона(1)',
                 downloadLink: './light_work/work8.zip',
                 technologies: ['HTML', 'CSS', 'Градиенты'],
-                size: '1.5 MB',
+                size: '0.7 MB', // Оценка: work8/index.html, style.css, img/priroda_ozero_gory_166874_3840x2160.jpg, img/na-rab-stol-2.jpg
                 icon: './img/head_title/html.png'
             },
             {
@@ -75,7 +75,7 @@ const downloadConfig = {
                 title: 'Цвет фона(2)',
                 downloadLink: './light_work/work9.zip',
                 technologies: ['HTML', 'CSS', 'Градиенты'],
-                size: '2.1 MB',
+                size: '0.7 MB', // Оценка: work9/index.html, style.css, img/fon.jpg (видимо, фон)
                 icon: './img/head_title/html.png'
             },
             {
@@ -83,7 +83,7 @@ const downloadConfig = {
                 title: 'Позиционирование',
                 downloadLink: './light_work/work10.zip',
                 technologies: ['HTML', 'CSS', 'Flexbox'],
-                size: '3.4 MB',
+                size: '0.3 MB', // Оценка: work10/index.html, style.css, img/dino.png
                 icon: './img/head_title/html.png'
             },
             {
@@ -91,7 +91,7 @@ const downloadConfig = {
                 title: 'Псевдоклассы ":hover, :has, :visited"',
                 downloadLink: './light_work/work11.zip',
                 technologies: ['HTML', 'CSS', 'Псевдоклассы'],
-                size: '2.8 MB',
+                size: '0.4 MB', // Оценка: work11/index.html, style.css, img/R.png, img/cog_icon_125323.png
                 icon: './img/head_title/html.png'
             },
             {
@@ -99,116 +99,304 @@ const downloadConfig = {
                 title: 'Псевдоклассы ":after :before"',
                 downloadLink: './light_work/work12.zip',
                 technologies: ['HTML', 'CSS', 'Псевдоклассы'],
-                size: '3.2 MB',
+                size: '0.3 MB', // Оценка: work12/index.html, style.css
                 icon: './img/head_title/html.png'
             },
             {
                 id: 'easy-13',
-                title: 'Псевдокласс ":child"',
+                title: 'Псевдокласс ":child"', // Work13
                 downloadLink: './light_work/work13.zip',
                 technologies: ['HTML', 'CSS', 'Псевдоклассы'],
-                size: '2.6 MB',
+                size: '0.2 MB', // Оценка: work13/index.html, style.css
                 icon: './img/head_title/html.png'
             },
             {
                 id: 'easy-14',
-                title: 'Flex(1)',
+                title: 'Flex(1)', // Work14
                 downloadLink: './light_work/work14.zip',
                 technologies: ['HTML', 'CSS', 'Flexbox'],
-                size: '3.9 MB',
+                size: '0.2 MB', // Оценка: work14/index.html, style.css
                 icon: './img/head_title/html.png'
             },
             {
                 id: 'easy-15',
-                title: 'Flex(2)',
+                title: 'Flex(2)', // Work15
                 downloadLink: './light_work/work15.zip',
                 technologies: ['HTML', 'CSS', 'Flexbox'],
-                size: '4.1 MB',
+                size: '0.6 MB', // Оценка: work15/index.html, style.css, img/pic_1.png, img/pic_2.png, img/pic_3.png
                 icon: './img/head_title/html.png'
             },
             {
                 id: 'easy-16',
-                title: 'Float',
+                title: 'Float', // Work16, нет данных в запросе
                 downloadLink: './light_work/work16.zip',
                 technologies: ['HTML', 'CSS', 'Float'],
-                size: '2.5 MB',
+                size: 'Не указан', // Не могу оценить без содержимого light_work/work16
                 icon: './img/head_title/html.png'
             },
             {
                 id: 'easy-17',
-                title: 'Трансформация(1)',
+                title: 'Трансформация(1)', // Work17
                 downloadLink: './light_work/work17.zip',
                 technologies: ['HTML', 'CSS', 'Transform'],
-                size: '3.7 MB',
+                size: '0.2 MB', // Оценка: work17/index.html, style.css
                 icon: './img/head_title/html.png'
             },
             {
                 id: 'easy-18',
-                title: 'Трансформация(2)',
+                title: 'Трансформация(2)', // Work18
                 downloadLink: './light_work/work18.zip',
                 technologies: ['HTML', 'CSS', 'Transform'],
-                size: '4.0 MB',
+                size: '0.2 MB', // Оценка: work18/index.html, style.css
                 icon: './img/head_title/html.png'
             },
             {
                 id: 'easy-19',
-                title: 'Трансформация(3)',
+                title: 'Трансформация(3)', // Work19
                 downloadLink: './light_work/work19.zip',
                 technologies: ['HTML', 'CSS', 'Transform'],
-                size: '3.8 MB',
+                size: '0.2 MB', // Оценка: work19/index.html, style.css
                 icon: './img/head_title/html.png'
             },
             {
                 id: 'easy-20',
-                title: 'Трансформация(4)',
+                title: 'Трансформация(4)', // Work20
                 downloadLink: './light_work/work20.zip',
                 technologies: ['HTML', 'CSS', 'Transform'],
-                size: '4.3 MB',
+                size: '0.2 MB', // Оценка: work20/index.html, style.css
                 icon: './img/head_title/html.png'
             },
             {
                 id: 'easy-21',
-                title: 'Анимации',
+                title: 'Анимации', // Work21
                 downloadLink: './light_work/work21.zip',
                 technologies: ['HTML', 'CSS', 'Animations'],
-                size: '5.2 MB',
+                size: '0.2 MB', // Оценка: work21/index.html, style.css
                 icon: './img/head_title/html.png'
             },
             {
                 id: 'easy-22',
-                title: 'Спрайты',
+                title: 'Спрайты', // Work22
                 downloadLink: './light_work/work22.zip',
                 technologies: ['HTML', 'CSS', 'Sprite'],
-                size: '6.1 MB',
+                size: '0.4 MB', // Оценка: work22/index.html, style.css, img/icon2.png
                 icon: './img/head_title/html.png'
             },
             {
                 id: 'easy-23',
-                title: 'Спрайт анимированный',
+                title: 'Спрайт анимированный', // Work23
                 downloadLink: './light_work/work23.zip',
                 technologies: ['HTML', 'CSS', 'Sprite', 'Animations'],
-                size: '7.3 MB',
+                size: '0.5 MB', // Оценка: work23/index.html, style.css, img/smurf.png
                 icon: './img/head_title/html.png'
             },
             {
                 id: 'easy-24',
-                title: 'Векторная графика',
+                title: 'Векторная графика', // Work24
                 downloadLink: './light_work/work24.zip',
                 technologies: ['HTML', 'CSS', 'SVG'],
-                size: '5.8 MB',
+                size: '0.2 MB', // Оценка: work24/index.html, style.css
                 icon: './img/head_title/html.png'
             }
         ]
     },
     'medium': {
         title: 'Средние проекты',
-        items: []
-    },
+        items: [
+            {
+                id: 'medium-1',
+                title: 'Карточная игра', // HW1/Card_game
+                downloadLink: './medium_work/HW1/Card_game.zip',
+                technologies: ['HTML', 'CSS'],
+                size: '0.5 MB', // Оценочный размер
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-2',
+                title: 'HTML Tutorial', // HW1/HTML_Tutorial
+                downloadLink: './medium_work/HW1/HTML_Tutorial.zip',
+                technologies: ['HTML', 'CSS'],
+                size: '0.7 MB',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-3',
+                title: 'Romeo and Juliet', // HW1/romeo_and_juliet
+                downloadLink: './medium_work/HW1/romeo_and_juliet.zip',
+                technologies: ['HTML', 'CSS'],
+                size: '0.6 MB',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-4',
+                title: 'Lorem Ipsum (HW2)', // HW2/Lorem_Ipsum
+                downloadLink: './medium_work/HW2/Lorem_Ipsum.zip',
+                technologies: ['HTML', 'CSS'],
+                size: '0.4 MB',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-5',
+                title: 'Математические формулы (HW2)', // HW2/Mathematical_formulas
+                downloadLink: './medium_work/HW2/Mathematical_formulas.zip',
+                technologies: ['HTML', 'CSS'],
+                size: '0.4 MB',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-6',
+                title: 'Транспорт (HW2)', // HW2/Vehicle
+                downloadLink: './medium_work/HW2/Vehicle.zip',
+                technologies: ['HTML', 'CSS'],
+                size: '0.3 MB',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-7',
+                title: 'The Orbitians (HW3)', // HW3
+                downloadLink: './medium_work/HW3.zip',
+                technologies: ['HTML', 'CSS'],
+                size: '0.8 MB',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-8',
+                title: 'Список фруктов (HW4-Task1)', // HW4/Task1
+                downloadLink: './medium_work/HW4/Task1.zip',
+                technologies: ['HTML', 'CSS'],
+                size: '0.3 MB',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-9',
+                title: 'Список дел (HW4-Task2)', // HW4/Task2
+                downloadLink: './medium_work/HW4/Task2.zip',
+                technologies: ['HTML', 'CSS'],
+                size: '0.4 MB',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-10',
+                title: 'Значение слова "TAG" (HW4-Task3)', // HW4/Task3
+                downloadLink: './medium_work/HW4/Task3.zip',
+                technologies: ['HTML', 'CSS'],
+                size: '0.5 MB',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-11',
+                title: 'Галерея телефонов (HW5-1)', // HW5/1
+                downloadLink: './medium_work/HW5/1.zip',
+                technologies: ['HTML', 'CSS'],
+                size: '1.2 MB',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-12',
+                title: 'Выпадающее меню (HW5)', // HW5
+                downloadLink: './medium_work/HW5.zip',
+                technologies: ['HTML', 'CSS'],
+                size: '0.7 MB',
+                // Описание отсутствует в оригинале medium_work/HW5/index.html
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-13',
+                title: 'Speak (HW6)', // HW6
+                downloadLink: './medium_work/HW6.zip',
+                technologies: ['HTML', 'CSS'],
+                size: '1.5 MB',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-14',
+                title: 'My fridge (HW7-1)', // HW7/1
+                downloadLink: './medium_work/HW7/1.zip',
+                technologies: ['HTML', 'CSS'],
+                size: '1.0 MB',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-15',
+                title: 'Список иконок (HW7-2)', // HW7/2
+                downloadLink: './medium_work/HW7/2.zip',
+                technologies: ['HTML', 'CSS'],
+                size: '0.4 MB',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-16',
+                title: 'Таблица в скролле (HW7-3)', // HW7/3
+                downloadLink: './medium_work/HW7/3.zip',
+                technologies: ['HTML', 'CSS'],
+                size: '0.5 MB',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-17',
+                title: 'Наши клиенты (HW8)', // HW8
+                downloadLink: './medium_work/HW8.zip',
+                technologies: ['HTML', 'CSS'],
+                size: '1.8 MB',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-18',
+                title: 'Прямоугольник и Квадрат (HW9-1)', // HW9/1
+                downloadLink: './medium_work/HW9/1.zip',
+                technologies: ['HTML', 'CSS', 'SVG'],
+                size: '0.2 MB',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-19',
+                title: 'Шутка дня (HW9-2)', // HW9/2 Shutka
+                downloadLink: './medium_work/HW9/2 Shutka.zip',
+                technologies: ['HTML', 'CSS'],
+                size: '0.3 MB',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-20',
+                title: 'Блок с SVG (HW9-3)', // HW9/3
+                downloadLink: './medium_work/HW9/3.zip',
+                technologies: ['HTML', 'CSS', 'SVG'],
+                size: '0.4 MB',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-21',
+                title: 'Перемещение фигур (HW10-1)', // HW10/1
+                downloadLink: './medium_work/HW10/1.zip',
+                technologies: ['HTML', 'CSS', 'SVG'],
+                size: '0.2 MB',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-22',
+                title: 'Анимированное сердце (HW10-2)', // HW10/2
+                downloadLink: './medium_work/HW10/2.zip',
+                technologies: ['HTML', 'CSS', 'SVG', 'Анимации'],
+                size: '0.3 MB',
+                icon: './img/head_title/html.png'
+            },
+            {
+                id: 'medium-23',
+                title: 'Hello, my site! (HW10-3)', // HW10/3
+                downloadLink: './medium_work/HW10/3.zip',
+                technologies: ['HTML', 'CSS'],
+                size: '0.2 MB',
+                icon: './img/head_title/html.png'
+            }
+        ]
+    }, 
     'hard': {
         title: 'Сложные проекты',
         items: []
     }
 };
+
+// ... остальной код ...
 
 // Инициализация системы скачивания
 function initDownloadSystem() {
