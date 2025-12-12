@@ -1555,15 +1555,7 @@ body.show-cursor-trail #cursor-trail {
     margin-bottom: 15px;
 }
 
-.tech-tag {
-    background-color: rgba(78, 201, 176, 0.15);
-    color: #4ec9b0;
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 11px;
-    font-weight: 500;
-    border: 1px solid rgba(78, 201, 176, 0.3);
-}
+
 
 .download-card-size {
     font-size: 12px;
@@ -2541,4 +2533,34 @@ body.show-cursor-trail #cursor-trail {
 
 .footer.collapsing {
     animation: footerCollapse 0.3s ease forwards;
+}
+@media (max-width: 768px) {
+    .download-level-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .download-counter {
+        align-self: flex-start;
+    }
+    
+    .level-divider {
+        margin: 10px 0 20px 0;
+    }
+}
+.download-card-tech .tech-tag {
+    background-color: var(--tech-tag-bg, rgba(78, 201, 176, 0.15));
+    color: var(--tech-tag-text, #4ec9b0);
+    border: 1px solid var(--tech-tag-border, rgba(78, 201, 176, 0.3));
+}
+.tech-tag {
+    background-color: var(--tech-tag-bg, rgba(78, 201, 176, 0.15));
+    color: var(--tech-tag-text, #4ec9b0);
+    border: 1px solid var(--tech-tag-border, rgba(78, 201, 176, 0.3));
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    display: inline-block;
 }

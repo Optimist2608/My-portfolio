@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./css/swap.css">
     <link rel="icon" type="image/x-icon" href="./img/logo.ico">
     <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/site-info.css">
     <link rel="stylesheet" href="./css/contacts.css">
     <meta name="theme-color" content="#002451">
 </head>
@@ -492,18 +491,6 @@
                 <span>Скачать мои работы</span>
             </div>
         </div>
-        <div class="footer-tab" data-tab="site-info">
-            <div class="footer-tab-header">
-                <img src="./img/footer/info.png" alt="info" class="footer-tab-icon">
-                <span>Информация о сайте</span>
-            </div>
-        </div>
-        <div class="footer-tab" data-tab="comments">
-            <div class="footer-tab-header">
-                <img src="./img/footer/comment.png" alt="comments" class="footer-tab-icon">
-                <span>Коментарии</span>
-            </div>
-        </div>
     </div>
     
     <div class="footer-tab-content active" id="problems-tab">
@@ -551,7 +538,7 @@
                 </div>
                 <div class="contact-info">
                     <h4>Discord</h4>
-                    <p class="contact-desc">Для игр и разработки</p>
+                    <p class="contact-desc">Для общения и разработок</p>
                     <div class="contact-link" data-copy="nooptimist">
                         <span class="contact-value">nooptimist</span>
                         <span class="copy-icon" title="Скопировать">📋</span>
@@ -585,79 +572,48 @@
 </div>
         
         <div class="footer-tab-content" id="output-tab">
-            <!-- Содержимое будет сгенерировано JavaScript -->
-        </div>
-        
-        <div class="footer-tab-content" id="site-info-tab">
-            <div class="site-info-content">
-                <div class="info-section">
-                    <h3>📊 Статистика сайта</h3>
-                    <div class="info-item">
-                        <span class="info-label">Последнее обновление:</span>
-                        <span id="last-updated" class="info-value">Загрузка...</span>
+            <div class="download-container">
+                <div class="download-header">📦 Скачать мои работы</div>
+                <div class="download-description">
+                    Все проекты упакованы в ZIP-архивы и готовы к скачиванию. Нажмите на кнопку скачивания для получения архива.
+                </div>
+                
+                <!-- Легкие проекты -->
+                <div class="download-level-section" id="easy-projects-section">
+                    <div class="download-level-header">
+                        <span class="level-title">Легкие проекты</span>
+                        <span class="download-counter">24 проектов</span>
                     </div>
-                    <div class="info-item">
-                        <span class="info-label">Всего страниц:</span>
-                        <span class="info-value">3 основные страницы</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Код проекта:</span>
-                        <span class="info-value">HTML5, CSS3, JavaScript</span>
+                    <hr class="level-divider">
+                    <div class="download-grid">
+                        <!-- Контент будет сгенерирован JavaScript -->
                     </div>
                 </div>
                 
-                <div class="info-section">
-                    <h3>🚀 Производительность</h3>
-                    <div class="info-item">
-                        <span class="info-label">Размер проекта:</span>
-                        <span id="project-size" class="info-value">Загрузка...</span>
+                <!-- Средние проекты -->
+                <div class="download-level-section" id="medium-projects-section">
+                    <div class="download-level-header">
+                        <span class="level-title">Средние проекты</span>
+                        <span class="download-counter">15 проектов</span>
                     </div>
-                    <div class="info-item">
-                        <span class="info-label">Время загрузки:</span>
-                        <span id="load-time" class="info-value">Загрузка...</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Оптимизация:</span>
-                        <span class="info-value">Оптимизирован для быстрой загрузки</span>
+                    <hr class="level-divider">
+                    <div class="download-grid">
+                        <!-- Контент будет сгенерирован JavaScript -->
                     </div>
                 </div>
                 
-                <div class="info-section">
-                    <h3>🔧 Технологии</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Flexbox</span>
-                        <span class="tech-tag">Grid</span>
-                        <span class="tech-tag">Responsive</span>
-                        <span class="tech-tag">Font Awesome</span>
-                        <span class="tech-tag">p5.js</span>
+                <!-- Сложные проекты -->
+                <div class="download-level-section" id="hard-projects-section">
+                    <div class="download-level-header">
+                        <span class="level-title">Сложные проекты</span>
+                        <span class="download-counter">8 проектов</span>
                     </div>
-                </div>
-                
-                <div class="info-section">
-                    <h3>📈 История обновлений</h3>
-                    <div class="update-history">
-                        <div class="update-item">
-                            <span class="update-date" id="last-change-date">Загрузка...</span>
-                            <span class="update-description">Последнее изменение сайта</span>
-                        </div>
-                        <div class="update-item">
-                            <span class="update-date">Декабрь 2025</span>
-                            <span class="update-description">Добавлены проекты начального уровня</span>
-                        </div>
-                        <div class="update-item">
-                            <span class="update-date">Декабрь 2025</span>
-                            <span class="update-description">Запуск портфолио</span>
-                        </div>
+                    <hr class="level-divider">
+                    <div class="download-grid">
+                        <!-- Контент будет сгенерирован JavaScript -->
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="footer-tab-content" id="comments-tab">
-            <p>No comments in the workspace.</p>
         </div>
     </div>
 </footer>
@@ -1295,7 +1251,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
 <script src="./js/swap.js"></script>
 <script src="./js/download.js"></script>
-<script src="./js/site-info.js"></script>
+
 <script src="./js/contacts.js"></script>
 </body>
 </html>
