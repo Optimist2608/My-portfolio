@@ -738,7 +738,7 @@ body {
     background-color: var(--download-btn-bg);
     color: var(--download-btn-text);
 }
-
+/* тест */
 .download-info, .download-instructions {
     background-color: var(--download-info-bg);
     border-left: 4px solid var(--download-info-border);

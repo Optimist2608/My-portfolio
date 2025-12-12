@@ -1533,7 +1533,7 @@ body.show-cursor-trail #cursor-trail {
 .download-card-content {
     flex: 1;
 }
-
+/* тест */
 .download-card-content h4 {
     font-size: 16px;
     margin-bottom: 10px;
