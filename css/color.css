@@ -113,6 +113,12 @@
     --quote-gradient-start: rgba(0, 36, 81, 0.6);
     --quote-gradient-end: rgba(26, 48, 77, 0.6);
     --quote-border: #4ec9b0;
+    --download-header-color: var(--text-light);
+--download-description-color: var(--text-gray);
+--download-level-title: var(--code-light-blue);
+--download-counter-bg: var(--terminal-teal);
+--download-counter-text: var(--primary-dark);
+--level-divider-color: var(--border-light);
 }
 
 /* ========== ОСНОВНЫЕ ЭЛЕМЕНТЫ ========== */
@@ -628,7 +634,42 @@ body {
     border-left: 5px solid var(--quote-border);
 }   
 /* ========== СТИЛИ ДЛЯ СИСТЕМЫ СКАЧИВАНИЯ ========== */
-
+.download-header {
+    color: var(--download-header-color);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.download-description {
+    color: var(--download-description-color);
+    font-size: 14px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+.download-level-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.level-title {
+    color: var(--download-level-title);
+    font-size: 20px;
+    font-weight: 600;
+}
+.download-counter {
+    background-color: var(--download-counter-bg);
+    color: var(--download-counter-text);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.level-divider {
+    border: none;
+    height: 1px;
+    background-color: var(--level-divider-color);
+    margin: 15px 0 25px 0;
+}
 .download-card {
     background-color: var(--download-card-bg);
     border: 1px solid var(--download-card-border);
@@ -643,7 +684,6 @@ body {
     color: var(--tech-tag-text);
     border: 1px solid var(--tech-tag-border);
 }
-
 .download-btn {
     background-color: var(--download-btn-bg);
     color: var(--download-btn-text);

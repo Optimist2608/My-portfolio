@@ -117,6 +117,13 @@
     --quote-gradient-start: rgba(13, 17, 23, 0.6);
     --quote-gradient-end: rgba(22, 27, 34, 0.6);
     --quote-border: #58a6ff;
+    --download-header-color: var(--text-light);
+--download-description-color: var(--text-gray);
+--download-level-title: var(--accent-blue);
+--download-counter-bg: var(--accent-blue);
+--download-counter-text: var(--primary-dark);
+--level-divider-color: var(--border-light);
+
 }
 
 /* ========== ОСНОВНЫЕ ЭЛЕМЕНТЫ ========== */
@@ -725,11 +732,7 @@ body {
     border-color: var(--download-card-hover-border);
 }
 
-.tech-tag {
-    background-color: var(--tech-tag-bg);
-    color: var(--tech-tag-text);
-    border: 1px solid var(--tech-tag-border);
-}
+
 
 .download-btn {
     background-color: var(--download-btn-bg);
@@ -757,12 +760,12 @@ body {
 .info-value {
     color: var(--accent-green);
 }
-
 .tech-tag {
-    background-color: rgba(88, 166, 255, 0.1);
+    background-color: rgba(88, 166, 255, 0.15);
     color: var(--accent-blue);
-    border-color: rgba(88, 166, 255, 0.3);
+    border: 1px solid rgba(88, 166, 255, 0.3);
 }
+
 
 .update-date {
     color: var(--accent-orange);

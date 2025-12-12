@@ -123,6 +123,12 @@
     --quote-gradient-start: rgba(248, 249, 250, 0.8);
     --quote-gradient-end: rgba(233, 245, 233, 0.8);
     --quote-border: #1abc9c;
+    --download-header-color: var(--text-dark);
+--download-description-color: var(--text-gray);
+--download-level-title: var(--forest-green);
+--download-counter-bg: var(--ocean-teal);
+--download-counter-text: #ffffff;
+--level-divider-color: var(--border-light);
 }
 
 /* ========== ОСНОВНЫЕ ЭЛЕМЕНТЫ ========== */
@@ -686,10 +692,9 @@ body {
 }
 
 .tech-tag {
-    background-color: var(--tech-tag-bg);
-    color: var(--tech-tag-text);
-    border: 1px solid var(--tech-tag-border);
-    font-weight: 500;
+    background-color: rgba(26, 188, 156, 0.15);
+    color: #1abc9c;
+    border: 1px solid rgba(26, 188, 156, 0.3);
 }
 
 .download-card-size {
@@ -866,11 +871,7 @@ body {
     color: var(--forest-green);
 }
 
-.tech-tag {
-    background-color: rgba(26, 188, 156, 0.1);
-    color: var(--ocean-teal);
-    border-color: rgba(26, 188, 156, 0.3);
-}
+
 
 .update-date {
     color: var(--sunset-orange);

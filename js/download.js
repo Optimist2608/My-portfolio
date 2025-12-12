@@ -10,7 +10,7 @@ const downloadConfig = {
                 title: 'Знакомство с HTML и CSS(1)',
                 description: 'Первый сайт созданный во время обучения',
                 downloadLink: './light_work/work1.zip',
-                requirements: ['HTML', 'CSS'],
+                technologies: ['HTML', 'CSS'],
                 size: '2.4 MB',
                 icon: './img/head_title/html.png'
             },
@@ -18,7 +18,7 @@ const downloadConfig = {
                 id: 'easy-2',
                 title: 'Знакомство с HTML и CSS(2)',
                 downloadLink: './light_work/work2.zip',
-                requirements: ['HTML', 'CSS'],
+                technologies: ['HTML', 'CSS'],
                 size: '3.1 MB',
                 icon: './img/head_title/html.png'
             },
@@ -26,7 +26,7 @@ const downloadConfig = {
                 id: 'easy-3',
                 title: 'Знакомство с HTML и CSS(3)',
                 downloadLink: './light_work/work3.zip',
-                requirements: ['HTML', 'CSS'],
+                technologies: ['HTML', 'CSS'],
                 size: '1.8 MB',
                 icon: './img/head_title/html.png'
             },
@@ -34,7 +34,7 @@ const downloadConfig = {
                 id: 'easy-4',
                 title: 'Знакомство с HTML и CSS(4)',
                 downloadLink: './light_work/work4.zip',
-                requirements: ['HTML', 'CSS'],
+                technologies: ['HTML', 'CSS'],
                 size: '2.7 MB',
                 icon: './img/head_title/html.png'
             },
@@ -42,7 +42,7 @@ const downloadConfig = {
                 id: 'easy-5',
                 title: 'Шрифты',
                 downloadLink: './light_work/work5.zip',
-                requirements: ['HTML', 'CSS', 'Шрифты'],
+                technologies: ['HTML', 'CSS', 'Шрифты'],
                 size: '4.2 MB',
                 icon: './img/head_title/html.png'
             },
@@ -50,7 +50,7 @@ const downloadConfig = {
                 id: 'easy-6',
                 title: 'Таблицы(1)',
                 downloadLink: './light_work/work6.zip',
-                requirements: ['HTML', 'CSS', 'Таблицы'],
+                technologies: ['HTML', 'CSS', 'Таблицы'],
                 size: '1.9 MB',
                 icon: './img/head_title/html.png'
             },
@@ -58,7 +58,7 @@ const downloadConfig = {
                 id: 'easy-7',
                 title: 'Таблицы(2)',
                 downloadLink: './light_work/work7.zip',
-                requirements: ['HTML', 'CSS', 'Таблицы'],
+                technologies: ['HTML', 'CSS', 'Таблицы'],
                 size: '2.3 MB',
                 icon: './img/head_title/html.png'
             },
@@ -66,7 +66,7 @@ const downloadConfig = {
                 id: 'easy-8',
                 title: 'Цвет фона(1)',
                 downloadLink: './light_work/work8.zip',
-                requirements: ['HTML', 'CSS', 'Градиенты'],
+                technologies: ['HTML', 'CSS', 'Градиенты'],
                 size: '1.5 MB',
                 icon: './img/head_title/html.png'
             },
@@ -74,7 +74,7 @@ const downloadConfig = {
                 id: 'easy-9',
                 title: 'Цвет фона(2)',
                 downloadLink: './light_work/work9.zip',
-                requirements: ['HTML', 'CSS', 'Градиенты'],
+                technologies: ['HTML', 'CSS', 'Градиенты'],
                 size: '2.1 MB',
                 icon: './img/head_title/html.png'
             },
@@ -82,7 +82,7 @@ const downloadConfig = {
                 id: 'easy-10',
                 title: 'Позиционирование',
                 downloadLink: './light_work/work10.zip',
-                requirements: ['HTML', 'CSS', 'Flexbox'],
+                technologies: ['HTML', 'CSS', 'Flexbox'],
                 size: '3.4 MB',
                 icon: './img/head_title/html.png'
             },
@@ -90,7 +90,7 @@ const downloadConfig = {
                 id: 'easy-11',
                 title: 'Псевдоклассы ":hover, :has, :visited"',
                 downloadLink: './light_work/work11.zip',
-                requirements: ['HTML', 'CSS', 'Псевдоклассы'],
+                technologies: ['HTML', 'CSS', 'Псевдоклассы'],
                 size: '2.8 MB',
                 icon: './img/head_title/html.png'
             },
@@ -98,7 +98,7 @@ const downloadConfig = {
                 id: 'easy-12',
                 title: 'Псевдоклассы ":after :before"',
                 downloadLink: './light_work/work12.zip',
-                requirements: ['HTML', 'CSS', 'Псевдоклассы'],
+                technologies: ['HTML', 'CSS', 'Псевдоклассы'],
                 size: '3.2 MB',
                 icon: './img/head_title/html.png'
             },
@@ -106,7 +106,7 @@ const downloadConfig = {
                 id: 'easy-13',
                 title: 'Псевдокласс ":child"',
                 downloadLink: './light_work/work13.zip',
-                requirements: ['HTML', 'CSS', 'Псевдоклассы'],
+                technologies: ['HTML', 'CSS', 'Псевдоклассы'],
                 size: '2.6 MB',
                 icon: './img/head_title/html.png'
             },
@@ -114,7 +114,7 @@ const downloadConfig = {
                 id: 'easy-14',
                 title: 'Flex(1)',
                 downloadLink: './light_work/work14.zip',
-                requirements: ['HTML', 'CSS', 'Flexbox'],
+                technologies: ['HTML', 'CSS', 'Flexbox'],
                 size: '3.9 MB',
                 icon: './img/head_title/html.png'
             },
@@ -122,7 +122,7 @@ const downloadConfig = {
                 id: 'easy-15',
                 title: 'Flex(2)',
                 downloadLink: './light_work/work15.zip',
-                requirements: ['HTML', 'CSS', 'Flexbox'],
+                technologies: ['HTML', 'CSS', 'Flexbox'],
                 size: '4.1 MB',
                 icon: './img/head_title/html.png'
             },
@@ -130,7 +130,7 @@ const downloadConfig = {
                 id: 'easy-16',
                 title: 'Float',
                 downloadLink: './light_work/work16.zip',
-                requirements: ['HTML', 'CSS', 'Float'],
+                technologies: ['HTML', 'CSS', 'Float'],
                 size: '2.5 MB',
                 icon: './img/head_title/html.png'
             },
@@ -138,7 +138,7 @@ const downloadConfig = {
                 id: 'easy-17',
                 title: 'Трансформация(1)',
                 downloadLink: './light_work/work17.zip',
-                requirements: ['HTML', 'CSS', 'Transform'],
+                technologies: ['HTML', 'CSS', 'Transform'],
                 size: '3.7 MB',
                 icon: './img/head_title/html.png'
             },
@@ -146,7 +146,7 @@ const downloadConfig = {
                 id: 'easy-18',
                 title: 'Трансформация(2)',
                 downloadLink: './light_work/work18.zip',
-                requirements: ['HTML', 'CSS', 'Transform'],
+                technologies: ['HTML', 'CSS', 'Transform'],
                 size: '4.0 MB',
                 icon: './img/head_title/html.png'
             },
@@ -154,7 +154,7 @@ const downloadConfig = {
                 id: 'easy-19',
                 title: 'Трансформация(3)',
                 downloadLink: './light_work/work19.zip',
-                requirements: ['HTML', 'CSS', 'Transform'],
+                technologies: ['HTML', 'CSS', 'Transform'],
                 size: '3.8 MB',
                 icon: './img/head_title/html.png'
             },
@@ -162,7 +162,7 @@ const downloadConfig = {
                 id: 'easy-20',
                 title: 'Трансформация(4)',
                 downloadLink: './light_work/work20.zip',
-                requirements: ['HTML', 'CSS', 'Transform'],
+                technologies: ['HTML', 'CSS', 'Transform'],
                 size: '4.3 MB',
                 icon: './img/head_title/html.png'
             },
@@ -170,7 +170,7 @@ const downloadConfig = {
                 id: 'easy-21',
                 title: 'Анимации',
                 downloadLink: './light_work/work21.zip',
-                requirements: ['HTML', 'CSS', 'Animations'],
+                technologies: ['HTML', 'CSS', 'Animations'],
                 size: '5.2 MB',
                 icon: './img/head_title/html.png'
             },
@@ -178,7 +178,7 @@ const downloadConfig = {
                 id: 'easy-22',
                 title: 'Спрайты',
                 downloadLink: './light_work/work22.zip',
-                requirements: ['HTML', 'CSS', 'Sprite'],
+                technologies: ['HTML', 'CSS', 'Sprite'],
                 size: '6.1 MB',
                 icon: './img/head_title/html.png'
             },
@@ -186,7 +186,7 @@ const downloadConfig = {
                 id: 'easy-23',
                 title: 'Спрайт анимированный',
                 downloadLink: './light_work/work23.zip',
-                requirements: ['HTML', 'CSS', 'Sprite', 'Animations'],
+                technologies: ['HTML', 'CSS', 'Sprite', 'Animations'],
                 size: '7.3 MB',
                 icon: './img/head_title/html.png'
             },
@@ -194,7 +194,7 @@ const downloadConfig = {
                 id: 'easy-24',
                 title: 'Векторная графика',
                 downloadLink: './light_work/work24.zip',
-                requirements: ['HTML', 'CSS', 'SVG'],
+                technologies: ['HTML', 'CSS', 'SVG'],
                 size: '5.8 MB',
                 icon: './img/head_title/html.png'
             }
@@ -337,16 +337,14 @@ function createProjectCard(project, level) {
         content.appendChild(desc);
     }
     
-    // Технологии
-    if (project.requirements && project.requirements.length > 0) {
+    // Технологии - ОБНОВЛЕНО
+    if (project.technologies && project.technologies.length > 0) {
         const techDiv = document.createElement('div');
         techDiv.className = 'download-card-tech';
-        project.requirements.forEach(tech => {
-            const techSpan = document.createElement('span');
-            techSpan.className = 'tech-tag';
-            techSpan.textContent = tech;
-            techDiv.appendChild(techSpan);
-        });
+        const techTagsHTML = project.technologies.map(tech => 
+            `<span class="tech-tag">${tech}</span>`
+        ).join('');
+        techDiv.innerHTML = techTagsHTML;
         content.appendChild(techDiv);
     }
     
