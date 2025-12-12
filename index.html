@@ -28,7 +28,7 @@
                     Синяя тема (Текущая)
                 </div>
                 <div class="theme-option" data-theme="white_color">
-                    <span class="theme-icon white"></span>
+                    <span class="theme-badge white"></span>
                     Белая тема
                 </div>
                 <div class="theme-option" data-theme="dark_color">
@@ -176,9 +176,8 @@
                     <div class="mentor-header">
                         <img src="./img/mentor/mentor-photo.jpg" alt="Мягков Сергей Васильевич" class="mentor-photo">
                         <div class="mentor-info">
-                            <h4><a href="https://vk.com/wall-193289357_295" target="_blank" class="mentor-name">Мягков Сергей Васильевич</a></h4>
-                            <p class="mentor-role">Педагог дополнительно образования, организатор, руководитель клуба "Юный авиатор"</p>
-                            <p class="mentor-period">Имеет две высшие квалифицированные категории педегога и организатора мироприятий. Для участников клуба создал музей, для того чтобы не ездить по другим. Так же 4 года воссоздавал историю Автозаводского клуба имени Водопьянова, ещё создал сообщество в ВК где выкладывает историю авиамоделистов со времен Великой Отечественной Войны.</p>
+                            <p class="mentor-role">Педагог дополнительно образования, организатор, руководитель <a href="https://vk.com/club193054803" target="_blank">клуба "Юный авиатор"</a></p>
+                            <p class="mentor-period">Имеет две высшие квалифицированные категории педегога и организатора мироприятий. Для участников клуба создал музей, для того чтобы не ездить по другим. Так же 4 года воссоздавал историю <a href="https://vk.com/club199011341" target="_blank">Автозаводского клуба имени Водопьянова</a>,создал <a href="https://vk.com/club198021525" target="_blank">музей</a> и ещё создал сообщество в ВК где выкладывает историю <a href="https://vk.com/club193289357" target="_blank">авиамоделистов</a> со времен Великой Отечественной Войны. На очередном заседании <a href="https://vk.com/im/convo/101418888?entrypoint=list_all&w=wall-86653747_103777" target="_blank">городской Думы</a> были приняты решения о присвоени почетного звания «Заслуженный работник образования города Нижнего Новгорода» Сергею Васильевичу.</p>
                         </div>
                     </div>
                     
@@ -458,6 +457,7 @@
                             
                             <div class="text-content">
                                 <h1>Проекты среднего уровня</h1>
+                            </div>
                         </div>
                     </div>
                     
@@ -478,22 +478,22 @@
             </main>
             
             <footer class="footer">
-    <div class="footer-tabs">
-        <div class="footer-tab active" data-tab="problems">
-            <div class="footer-tab-header">
-                <img src="./img/footer/contact_me.png" alt="contact" class="footer-tab-icon">
-                <span>Связаться со мной</span>
+        <div class="footer-tabs">
+            <div class="footer-tab active" data-tab="problems">
+                <div class="footer-tab-header">
+                    <img src="./img/footer/contact_me.png" alt="contact" class="footer-tab-icon">
+                    <span>Связаться со мной</span>
+                </div>
+            </div>
+            <div class="footer-tab" data-tab="output">
+                <div class="footer-tab-header">
+                    <img src="./img/footer/download-icon.png" alt="download" class="footer-tab-icon">
+                    <span>Скачать мои работы</span>
+                </div>
             </div>
         </div>
-        <div class="footer-tab" data-tab="output">
-            <div class="footer-tab-header">
-                <img src="./img/footer/download-icon.png" alt="download" class="footer-tab-icon">
-                <span>Скачать мои работы</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="footer-tab-content active" id="problems-tab">
+        
+        <div class="footer-tab-content active" id="problems-tab">
     <div class="contacts-content">
         <div class="contacts-header">
             <h3>📧 Мои контакты</h3>
@@ -570,7 +570,7 @@
         </div>
     </div>
 </div>
-        
+    
         <div class="footer-tab-content" id="output-tab">
             <div class="download-container">
                 <div class="download-header">📦 Скачать мои работы</div>
@@ -621,7 +621,6 @@
     </div>
     
     <script>
-// Функция для установки атрибута темы на body
 function setThemeAttribute(themeName) {
     document.body.setAttribute('data-theme', themeName);
 }
@@ -743,7 +742,7 @@ class TabSystem {
                 tab.classList.add('active');
             }
         });
-        
+                
         // Обновляем контент
         this.updateContent();
     }
@@ -879,15 +878,18 @@ function updateThemeText(themeName) {
         
         // Сохраняем иконку
         const icon = option.querySelector('.theme-icon');
+        const badge = option.querySelector('.theme-badge'); // Добавлено для белой темы
         
         // Если это текущая тема, добавляем пометку
         if (theme === themeName) {
             option.innerHTML = '';
             if (icon) option.appendChild(icon);
+            if (badge) option.appendChild(badge); // Добавлено для белой темы
             option.appendChild(document.createTextNode(baseText + ' (Текущая)'));
         } else {
             option.innerHTML = '';
             if (icon) option.appendChild(icon);
+            if (badge) option.appendChild(badge); // Добавлено для белой темы
             option.appendChild(document.createTextNode(baseText));
         }
     });
@@ -1138,112 +1140,105 @@ document.addEventListener('DOMContentLoaded', function() {
     document.head.appendChild(style);
 });
 </script>
-    <script>
-        // ========== УПРАВЛЕНИЕ ФУТЕРОМ ==========
-document.addEventListener('DOMContentLoaded', function() {
-    const footer = document.querySelector('.footer');
-    const footerTabs = document.querySelector('.footer-tabs');
-    const footerContent = document.querySelector('.footer-content');
-    let footerTimeout;
-    let isAnimating = false;
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const footer = document.querySelector('.footer');
+        const footerTabs = document.querySelector('.footer-tabs');
+        // FOOTER_CONTENT был перемещен, теперь он находится внутри #problems-tab и #output-tab
+        // поэтому его нужно выбрать динамически или удалить, если он не нужен для общего управления
+        const footerContent = document.getElementById('problems-tab'); // Или другой дефолтный активный контент
 
-    // Функция для раскрытия футера
-    function expandFooter() {
-        if (isAnimating || footer.classList.contains('expanded')) return;
-        
-        clearTimeout(footerTimeout);
-        isAnimating = true;
-        
-        // Удаляем классы анимации
-        footer.classList.remove('collapsing');
-        footer.classList.add('expanding');
-        
-        setTimeout(() => {
-            footer.classList.add('expanded');
-            footer.classList.remove('expanding');
-            isAnimating = false;
-        }, 300);
-    }
+        let footerTimeout;
+        let isAnimating = false;
 
-    // Функция для скрытия футера
-    function collapseFooter() {
-        if (isAnimating || !footer.classList.contains('expanded')) return;
-        
-        footerTimeout = setTimeout(() => {
-            if (isAnimating) return;
+        function expandFooter() {
+            if (isAnimating || footer.classList.contains('expanded')) return;
             
+            clearTimeout(footerTimeout);
             isAnimating = true;
-            footer.classList.remove('expanding');
-            footer.classList.add('collapsing');
+            
+            footer.classList.remove('collapsing');
+            footer.classList.add('expanding');
             
             setTimeout(() => {
-                footer.classList.remove('expanded');
-                footer.classList.remove('collapsing');
+                footer.classList.add('expanded');
+                footer.classList.remove('expanding');
                 isAnimating = false;
             }, 300);
-        }, 500); // Увеличиваем задержку перед скрытием
-    }
-
-    // Раскрытие футера при клике на вкладки
-    footerTabs.addEventListener('click', function(e) {
-        if (e.target.closest('.footer-tab')) {
-            expandFooter();
         }
-    });
 
-    // Раскрытие футера при наведении на вкладки
-    footerTabs.addEventListener('mouseenter', function() {
-        expandFooter();
-    });
-
-    // Скрытие футера при уходе мыши с футера
-    footer.addEventListener('mouseleave', function(e) {
-        // Проверяем, что мышь действительно ушла с футера
-        if (!footer.contains(e.relatedTarget)) {
-            collapseFooter();
-        }
-    });
-
-    // Предотвращение скрытия при наведении на контент футера
-    footerContent.addEventListener('mouseenter', function() {
-        clearTimeout(footerTimeout);
-    });
-
-    // Скрытие футера при клике вне его
-    document.addEventListener('click', function(e) {
-        if (!footer.contains(e.target) && footer.classList.contains('expanded')) {
-            collapseFooter();
-        }
-    });
-
-    // Сохранение работы переключения вкладок футера
-    document.querySelectorAll('.footer-tab').forEach(tab => {
-        tab.addEventListener('click', (e) => {
-            // Убираем активный класс со всех вкладок и контента
-            document.querySelectorAll('.footer-tab, .footer-tab-content').forEach(el => {
-                el.classList.remove('active');
-            });
+        function collapseFooter() {
+            if (isAnimating || !footer.classList.contains('expanded')) return;
             
-            // Добавляем активный класс нажатой вкладке
-            tab.classList.add('active');
-            
-            // Показываем соответствующий контент
-            const tabId = tab.getAttribute('data-tab');
-            const tabContent = document.getElementById(`${tabId}-tab`);
-            if (tabContent) {
-                tabContent.classList.add('active');
+            footerTimeout = setTimeout(() => {
+                if (isAnimating) return;
+                
+                isAnimating = true;
+                footer.classList.remove('expanding');
+                footer.classList.add('collapsing');
+                
+                setTimeout(() => {
+                    footer.classList.remove('expanded');
+                    footer.classList.remove('collapsing');
+                    isAnimating = false;
+                }, 300);
+            }, 500);
+        }
+
+        footerTabs.addEventListener('click', function(e) {
+            if (e.target.closest('.footer-tab')) {
+                expandFooter();
             }
-            
-            // Раскрываем футер
-            expandFooter();
-            e.stopPropagation();
         });
-    });
 
-    // Устанавливаем начальное состояние футера
-    footer.classList.remove('expanded');
-});
-    </script>
+        footerTabs.addEventListener('mouseenter', function() {
+            expandFooter();
+        });
+
+        footer.addEventListener('mouseleave', function(e) {
+            if (!footer.contains(e.relatedTarget)) {
+                collapseFooter();
+            }
+        });
+
+        // Теперь footerContent должен быть динамически выбран или управляться по-другому
+        // Этот обработчик может вызвать ошибку, если footerContent не будет найден
+        if (footerContent) {
+            footerContent.addEventListener('mouseenter', function() {
+                clearTimeout(footerTimeout);
+            });
+        }
+        
+
+        document.addEventListener('click', function(e) {
+            if (!footer.contains(e.target) && footer.classList.contains('expanded')) {
+                collapseFooter();
+            }
+        });
+
+        document.querySelectorAll('.footer-tab').forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                document.querySelectorAll('.footer-tab, .footer-tab-content').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                tab.classList.add('active');
+                
+                const tabId = tab.getAttribute('data-tab');
+                const tabContent = document.getElementById(`${tabId}-tab`);
+                if (tabContent) {
+                    tabContent.classList.add('active');
+                }
+                
+                expandFooter();
+                e.stopPropagation();
+            });
+        });
+
+        footer.classList.remove('expanded');
+    });
+</script>
+
 <!-- Контейнер для анимации курсора -->
 <div id="cursor-trail"></div>
 <script src="./js/cursor.js"></script>
